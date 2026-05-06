@@ -1,7 +1,7 @@
 import "./App.css";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
-// import LeadForm from "./components/LeadForm";
+import LeadForm from "./components/LeadForm";
 import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -14,10 +14,10 @@ function App() {
   return (
     <div className="flex flex-col justify-center items-center bg-light">
       <HeroSection />
-      {/* <LeadForm /> */}
+      <LeadForm />
       <About />
       <WhyChooseUs />
-      {/* <ProfessionalCourses /> */}
+      <ProfessionalCourses />
       <TrainingTimeline />
       <WhatYouGet />
       <PortfolioSection />

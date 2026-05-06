@@ -4,12 +4,12 @@ const LeadForm = () => {
   return (
     <section className="w-full bg-light py-16 px-4 md:px-8">
       <div className="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-        <div className="bg-primary p-8 md:p-12 md:w-2/5 flex flex-col justify-center">
+        <div className="bg-primary px-6 py-4 sm:p-8 md:p-12 md:w-2/5 flex flex-col justify-center">
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl font-bold mb-4 text-accent tracking-tighter"
+            className="text-3xl sm:text-5xl font-bold mt-5 sm:mt-0 mb-2 sm:mb-4 text-accent tracking-tighter"
           >
             Get Course Details
           </motion.h2>
@@ -24,7 +24,7 @@ const LeadForm = () => {
             guidance.
           </motion.p>
 
-          <div className="mt-8 space-y-2">
+          <div className="mt-3 sm:mt-8 space-y-2">
             <div className="flex items-center gap-3 text-accent text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-accent"></span>
               Expert Guidance
@@ -37,8 +37,8 @@ const LeadForm = () => {
         </div>
 
         {/* Right Side: Form */}
-        <div className="p-8 md:p-12 md:w-3/5 bg-accent">
-          <form className="space-y-4">
+        <div className="px-4 py-3 sm:p-8 md:p-12 md:w-3/5 bg-accent">
+          <form className="space-y-2 sm:space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1">
                 <label className="text-primary text-sm font-semibold ml-1">
@@ -75,7 +75,7 @@ const LeadForm = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-primary text-xs font-semibold ml-1">
+              <label className="text-primary text-sm font-semibold ml-1">
                 Select Location
               </label>
               <select className="w-full px-4 py-3 rounded-xl border border-secondary/20 focus:border-accent outline-none transition-all text-primary bg-light appearance-none">
@@ -90,7 +90,7 @@ const LeadForm = () => {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-primary text-xs font-semibold ml-1">
+              <label className="text-primary text-sm font-semibold ml-1">
                 Message
               </label>
               <textarea
