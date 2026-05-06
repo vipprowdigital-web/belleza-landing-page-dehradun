@@ -49,7 +49,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-24 px-6 bg-light overflow-hidden">
+    <section className="pt-24 px-6 bg-light overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10">

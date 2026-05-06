@@ -101,7 +101,7 @@ export default function About() {
         </div>
       </section>
       <motion.div
-        className="text-center mt-30 my-10 px-4"
+        className="text-center mt-30 px-4"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -112,7 +112,7 @@ export default function About() {
           &ldquo;
         </div>
 
-        <p className="font-bold text-3xl md:text-4xl leading-tight text-primary max-w-4xl mx-auto mb-10 tracking-tight">
+        <p className="font-bold text-3xl md:text-4xl leading-tighter text-primary max-w-4xl mx-auto mb-10 tracking-tighter">
           At Belleza, students don’t just learn techniques —
           <br />
           they learn how to work confidently in the{" "}

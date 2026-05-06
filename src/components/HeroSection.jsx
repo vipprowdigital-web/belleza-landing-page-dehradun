@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full flex flex-col justify-between items-start h-screen bg-light p-5 overflow-hidden">
+    <section className="w-full flex flex-col justify-between items-start h-screen bg-light p-7 overflow-hidden">
       {/* Logo */}
       <motion.div>
         <img
@@ -36,21 +36,21 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10"
+        className="w-full h-full flex flex-col justify-center items-center gap-2 sm:mt-10"
         variants={container}
         initial="hidden"
         animate="show"
       >
         <motion.h1
           variants={fadeUp}
-          className="w-1/2 font-extrabold text-6xl text-center text-secondary leading-tight tracking-tighter"
+          className="w-full md:w-1/2 font-extrabold text-4xl md:text-6xl text-center text-secondary leading-tight tracking-tighter"
         >
           Become a Certified Beauty Professional in Dehradun
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="text-center text-md max-w-xl leading-tight tracking-tight text-secondary font-semibold"
+          className="text-center text-md max-w-lg sm:max-w-xl leading-tight tracking-tight text-secondary font-semibold"
         >
           Learn professional{" "}
           <span className="font-bold italic">
@@ -74,13 +74,12 @@ export default function HeroSection() {
           className="flex flex-row items-center justify-center gap-2 mt-4"
         >
           <motion.button
-            className="px-10 py-3 bg-primary rounded-full text-sm font-semibold tracking-tight capitalize text-light shadow-md"
+            className="px-5 sm:px-10 py-3 bg-primary rounded-full text-sm font-semibold tracking-tight capitalize text-light shadow-md"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Book Free Counselling
           </motion.button>
-
           <motion.button
             className="px-10 py-3 bg-primary rounded-full text-sm font-semibold tracking-tight capitalize text-light shadow-md"
             whileHover={{ scale: 1.05 }}
@@ -92,7 +91,6 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Footer Info */}
-      
     </section>
   );
 }
