@@ -147,7 +147,7 @@ const CourseCard = ({ title, description, learningPoints, careerOptions }) => {
       className="bg-light rounded-3xl overflow-hidden shadow-xl shadow-primary/5 border border-primary flex flex-col md:flex-row"
     >
       {/* Banner */}
-      <div className="w-full md:w-1/3 bg-primary relative min-h-[200px] sm:min-h-[240px] flex items-center justify-center p-6 sm:p-8">
+      <div className="w-full md:w-1/3 bg-primary relative min-h-50 sm:min-h-60 flex items-center justify-center p-6 sm:p-8">
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
         <div className="relative z-10 text-center">
@@ -219,12 +219,16 @@ const ProfessionalCourses = () => {
   const [activeTab, setActiveTab] = useState("Makeup");
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light">
-      <div className="max-w-6xl mx-auto">
+    <section
+      className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light"
+      id="courses"
+    >
+      <div className="mx-auto">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-14 md:mb-16">
           <h2 className="text-primary text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">
-            Our Professional Courses
+            Our Professional{" "}
+            <span className="text-secondary italic font-serif">Courses</span>
           </h2>
 
           <p className="text-secondary uppercase tracking-widest text-[10px] sm:text-xs font-bold">

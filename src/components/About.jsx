@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="w-full py-20 px-6 bg-light flex flex-col justify-center items-center">
+    <section
+      className="w-full py-20 px-6 bg-light flex flex-col justify-center items-center"
+      id="about"
+    >
       <section className="w-full">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -44,8 +47,12 @@ export default function About() {
                 <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-2">
                   Empowering Your Passion
                 </h4>
-                <h2 className="font-bold tracking-tighter text-secondary text-4xl md:text-5xl leading-tight">
-                  About Belleza Beauty School Dehradun
+                <h2 className="font-bold tracking-tighter text-primary text-4xl md:text-5xl leading-tight">
+                  About{" "}
+                  <span className="text-secondary italic">
+                    Belleza Beauty School
+                  </span>{" "}
+                  Dehradun
                 </h2>
               </motion.div>
 

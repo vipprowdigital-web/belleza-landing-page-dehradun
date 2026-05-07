@@ -62,3 +62,8 @@
 .bg-secondary-20 {
   background-color: rgba(var(--color-secondary), 0.2);
 }
+
+/* .logo-scratch {
+  filter: drop-shadow(200px 5px var(---color-primary));
+  transform: translateX(-200px);
+} */

@@ -24,7 +24,10 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section className="relative w-full py-24 px-6 bg-light overflow-hidden flex flex-col items-center justify-center text-center">
+    <section
+      className="relative w-full py-24 px-6 bg-light overflow-hidden flex flex-col items-center justify-center text-center"
+      id="portfolio"
+    >
       {/* Decorative Background Elements */}
       <motion.div
         animate={{

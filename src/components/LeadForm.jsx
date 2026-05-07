@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const LeadForm = () => {
   return (
-    <section className="w-full bg-light py-16 px-4 md:px-8">
+    <section className="w-full bg-light py-16 px-4 md:px-8" id="contact">
       <div className="max-w-5xl mx-auto rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
         <div className="bg-primary px-6 py-4 sm:p-8 md:p-12 md:w-2/5 flex flex-col justify-center">
           <motion.h2

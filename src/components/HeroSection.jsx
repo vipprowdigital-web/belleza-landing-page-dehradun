@@ -20,9 +20,21 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full flex flex-col justify-between items-start h-screen bg-light p-7 overflow-hidden">
+    <section
+      className="w-full flex flex-col justify-between items-start h-screen bg-light p-7 overflow-hidden"
+      style={{
+        backgroundImage: "url('/assets/images/bg-img.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-black/30 to-transparent backdrop-blur-sm"></div>
+      </div>
       {/* Logo */}
-      <motion.div>
+      {/* <motion.div>
         <img
           src="/assets/images/logos/belleza_logo.svg"
           alt="Belleza Logo"
@@ -32,25 +44,25 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
           whileHover={{ scale: 1.05 }}
         />
-      </motion.div>
+      </motion.div> */}
 
       {/* Content */}
       <motion.div
-        className="w-full h-full flex flex-col justify-center items-center gap-2 sm:mt-10"
+        className="w-full h-full flex z-10 flex-col justify-center items-end gap-2 sm:mt-10"
         variants={container}
         initial="hidden"
         animate="show"
       >
         <motion.h1
           variants={fadeUp}
-          className="w-full md:w-1/2 font-extrabold text-4xl md:text-6xl text-center text-secondary leading-tight tracking-tighter"
+          className="w-full md:w-1/2 font-extrabold text-4xl md:text-6xl text-right text-accent leading-tight tracking-tighter"
         >
-          Become a Certified Beauty Professional in Dehradun
+          Become a Certified <br /> Beauty Professional <br /> in Dehradun
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="text-center text-md max-w-lg sm:max-w-xl leading-tight tracking-tight text-secondary font-semibold"
+          className="text-right text-md max-w-lg sm:max-w-xl leading-tight tracking-tight text-accent font-semibold"
         >
           Learn professional{" "}
           <span className="font-bold italic">
@@ -62,7 +74,7 @@ export default function HeroSection() {
 
         <motion.p
           variants={fadeUp}
-          className="text-center text-sm max-w-xl text-secondary font-semibold"
+          className="text-right text-sm max-w-xl text-accent font-semibold"
         >
           Start your beauty career with international-standard training and
           professional certification.

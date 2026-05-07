@@ -49,7 +49,7 @@ const TrainingTimeline = () => {
   });
 
   return (
-    <section className="py-24 bg-light" ref={containerRef}>
+    <section className="py-24 bg-light" ref={containerRef} id="training">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-primary text-4xl md:text-5xl font-bold tracking-tight">

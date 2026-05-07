@@ -9,6 +9,14 @@ import ProfessionalCourses from "./components/ProfessionalCourses";
 import TrainingTimeline from "./components/TrainingTimeline";
 import WhatYouGet from "./components/WhatYouGet";
 import PortfolioSection from "./components/PortfolioSection";
+import CareerOpportunities from "./components/CareerOpportunities";
+import EligibilitySection from "./components/EligibilitySection";
+import AdmissionsCTA from "./components/AdmissionsCTA";
+import StudentExperience from "./components/StudentExperience";
+import FAQs from "./components/FAQs";
+import FinalCTA from "./components/FinalCTA";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -21,6 +29,14 @@ function App() {
       <TrainingTimeline />
       <WhatYouGet />
       <PortfolioSection />
+      <CareerOpportunities />
+      <EligibilitySection />
+      <AdmissionsCTA />
+      <StudentExperience />
+      <FAQs />
+      <FinalCTA />
+      <Footer />
+      <Navbar />
       <div className="flex flex-col fixed bottom-5 left-5">
         <motion.div
           className="flex flex-col items-start mt-6 gap-3"

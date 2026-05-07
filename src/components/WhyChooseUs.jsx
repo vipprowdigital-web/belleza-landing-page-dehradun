@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="text-primary text-4xl md:text-6xl font-bold mt-4 tracking-tight"
+            className="text-primary text-4xl md:text-5xl font-bold mt-4 tracking-tight"
           >
             The Belleza{" "}
             <span className="italic font-serif text-secondary">Advantage</span>
