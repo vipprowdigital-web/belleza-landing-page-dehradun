@@ -65,7 +65,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`font-bold text-sm uppercase tracking-widest transition-colors relative group ${scrolled ? "text-accent" : "text-primary"}`}
+              className={`font-bold text-sm uppercase tracking-widest transition-colors relative group ${scrolled ? "text-accent" : "text-accent"}`}
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -91,7 +91,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className={`lg:hidden text-primary p-2 ${scrolled ? "text-accent" : "text-primary"}`}
+          className={`lg:hidden text-primary p-2 ${scrolled ? "text-accent" : "text-accent"}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}

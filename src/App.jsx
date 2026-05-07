@@ -17,6 +17,7 @@ import FAQs from "./components/FAQs";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import FloatingContact from "./components/FloatingContact";
 
 function App() {
   return (
@@ -37,14 +38,14 @@ function App() {
       <FinalCTA />
       <Footer />
       <Navbar />
-      <div className="flex flex-col fixed bottom-5 left-5">
+      <FloatingContact />
+      {/* <div className="flex flex-col fixed bottom-5 left-5">
         <motion.div
           className="flex flex-col items-start mt-6 gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          {/* Phone */}
           <motion.div
             className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer"
             initial="collapsed"
@@ -56,7 +57,6 @@ function App() {
             }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
-            {/* Fixed width icon container ensures the icon stays dead-center */}
             <div className="flex items-center justify-center w-11.25 h-11.25 shrink-0">
               <Phone size={18} />
             </div>
@@ -73,7 +73,6 @@ function App() {
             </motion.span>
           </motion.div>
 
-          {/* Address */}
           <motion.div
             className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer"
             initial="collapsed"
@@ -101,7 +100,7 @@ function App() {
             </motion.span>
           </motion.div>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 }

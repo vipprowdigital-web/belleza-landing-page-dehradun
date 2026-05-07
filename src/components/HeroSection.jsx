@@ -31,7 +31,7 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-black/30 to-transparent backdrop-blur-sm"></div>
+        <div className="absolute right-0 top-0 h-full w-3/4 bg-linear-to-l from-black/30 to-transparent  backdrop-blur-sm"></div>
       </div>
       {/* Logo */}
       {/* <motion.div>
