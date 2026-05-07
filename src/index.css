@@ -7,6 +7,18 @@
   --color-light: #f7f7ee;
 }
 
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
 /* BACKGROUND CLASSES */
 .bg-primary {
   background-color: var(--color-primary);
@@ -67,3 +79,12 @@
   filter: drop-shadow(200px 5px var(---color-primary));
   transform: translateX(-200px);
 } */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

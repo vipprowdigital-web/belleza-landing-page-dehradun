@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { openWhatsApp } from "../utils/openWhatsapp";
+import { scrollTo } from "../utils/scrollTo";
 
 export default function HeroSection() {
   const container = {
@@ -89,6 +91,7 @@ export default function HeroSection() {
             className="px-5 sm:px-10 py-3 bg-primary rounded-full text-sm font-semibold tracking-tight capitalize text-light shadow-md"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => scrollTo("contact")}
           >
             Book Free Counselling
           </motion.button>
@@ -96,6 +99,7 @@ export default function HeroSection() {
             className="px-10 py-3 bg-primary rounded-full text-sm font-semibold tracking-tight capitalize text-light shadow-md"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={openWhatsApp}
           >
             Call Now
           </motion.button>

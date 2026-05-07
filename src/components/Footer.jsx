@@ -10,9 +10,12 @@ import { scrollTo } from "../utils/scrollTo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const openWhatsApp = () => {
+    window.open("https://wa.me/919012360088", "_blank");
+  };
 
   return (
-    <footer className="w-full bg-primary text-light pt-16 pb-8 px-6">
+    <footer className="w-full bg-primary text-light pt-16 pb-8 sm:px-20 px-6">
       <div className="w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand Column */}
@@ -111,7 +114,10 @@ const Footer = () => {
                   Dharampur, Dehradun, Uttarakhand 248001
                 </p>
               </div>
-              <div className="flex items-center gap-3">
+              <div
+                className="flex items-center gap-3 cursor-pointer"
+                onClick={openWhatsApp}
+              >
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <p className="text-sm text-light/70">+91 90123 60088</p>
               </div>
@@ -130,7 +136,9 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-light/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] uppercase tracking-[0.2em] text-light/40 font-bold">
-          <p>© {currentYear} Belleza Beauty School. All Rights Reserved.</p>
+          <p className="text-center sm:text-left">
+            &copy; {currentYear} Belleza Beauty School. All Rights Reserved.
+          </p>
           <div className="flex gap-8">
             <a
               href="https://vipprow.com"

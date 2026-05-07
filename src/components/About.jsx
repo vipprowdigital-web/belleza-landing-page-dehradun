@@ -15,21 +15,23 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="relative"
+              className="relative order-2 sm:order-1"
             >
               {/* Decorative background element */}
               <div className="absolute -top-4 -left-4 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
 
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/"
+                  src="/assets/images/bg-img.jpg"
                   alt="Belleza Beauty School Training"
                   className="w-full h-full object-cover"
                 />
                 {/* Floating Badge */}
-                <div className="absolute bottom-6 right-6 bg-primary p-4 rounded-xl shadow-lg">
-                  <p className="text-accent text-2xl font-bold">100%</p>
-                  <p className="text-light text-[10px] uppercase tracking-widest font-semibold">
+                <div className="absolute bottom-6 right-6 bg-primary px-4 py-2 rounded-xl shadow-lg">
+                  <p className="text-accent sm:text-2xl font-bold italic">
+                    100%
+                  </p>
+                  <p className="text-light text-[8px] sm:text-[10px] uppercase tracking-widest font-semibold">
                     Practical Training
                   </p>
                 </div>
@@ -37,7 +39,7 @@ export default function About() {
             </motion.div>
 
             {/* Right Side: Content */}
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-6 order-1 sm:order-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -7,14 +7,18 @@ const FloatingContact = () => {
   const [isPhoneExpanded, setIsPhoneExpanded] = useState(false);
   const [isMapExpanded, setIsMapExpanded] = useState(false);
 
-  const variants = {
-    collapsed: { width: 45 },
-    expanded: { width: "auto", minWidth: 45 }, // "auto" allows it to fit text perfectly
-  };
+  //   const variants = {
+  //     collapsed: { width: 45 },
+  //     expanded: { width: "auto", minWidth: 45 }, // "auto" allows it to fit text perfectly
+  //   };
 
   const textVariants = {
     collapsed: { opacity: 0, x: -10, display: "none" },
     expanded: { opacity: 1, x: 0, display: "block" },
+  };
+
+  const openWhatsApp = () => {
+    window.open("https://wa.me/919012360088", "_blank");
   };
 
   return (
@@ -27,7 +31,7 @@ const FloatingContact = () => {
       >
         {/* Phone Item */}
         <motion.div
-          className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg"
+          className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg border border-light"
           initial="collapsed"
           // Hover for desktop, animate based on state for tap
           whileHover="expanded"
@@ -38,6 +42,7 @@ const FloatingContact = () => {
             expanded: { width: 220 },
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
+          onClick={openWhatsApp}
         >
           <div className="flex items-center justify-center w-11.25 h-11.25 shrink-0">
             <Phone size={18} className="text-accent" />
@@ -54,7 +59,7 @@ const FloatingContact = () => {
 
         {/* Address Item */}
         <motion.div
-          className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg"
+          className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg border border-light"
           initial="collapsed"
           whileHover="expanded"
           animate={isMapExpanded ? "expanded" : "collapsed"}

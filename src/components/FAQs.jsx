@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { scrollTo } from "../utils/scrollTo";
 
 const faqs = [
   {
@@ -78,10 +79,10 @@ const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-24 px-6 bg-light" id="faqs">
+    <section className="pt-24 px-6 bg-light" id="faqs">
       <div className="w-full mx-auto">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10">
           <motion.span
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -121,12 +122,15 @@ const FAQs = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-12 p-8 bg-light rounded-4xl flex flex-col md:flex-row items-center justify-between gap-6"
+          className="sm:mt-12 p-8 bg-light rounded-4xl flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <p className="text-primary font-medium tracking-tight">
+          <p className="text-primary text-center font-medium tracking-tight">
             Still have more questions about our Dehradun branch?
           </p>
-          <button className="px-8 py-3 bg-primary text-light rounded-full font-bold text-sm hover:bg-accent hover:text-primary transition-all duration-300">
+          <button
+            className="px-8 py-3 bg-primary text-light rounded-full font-bold text-sm hover:bg-accent hover:text-primary transition-all duration-300"
+            onClick={() => scrollTo("contact")}
+          >
             Contact Support
           </button>
         </motion.div>

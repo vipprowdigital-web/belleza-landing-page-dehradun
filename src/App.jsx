@@ -2,8 +2,8 @@ import "./App.css";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
 import LeadForm from "./components/LeadForm";
-import { motion } from "framer-motion";
-import { MapPin, Phone } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { MapPin, Phone } from "lucide-react";
 import WhyChooseUs from "./components/WhyChooseUs";
 import ProfessionalCourses from "./components/ProfessionalCourses";
 import TrainingTimeline from "./components/TrainingTimeline";
@@ -18,6 +18,7 @@ import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FloatingContact from "./components/FloatingContact";
+import Courses from "./components/Courses";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       <LeadForm />
       <About />
       <WhyChooseUs />
-      <ProfessionalCourses />
+      {/* <ProfessionalCourses /> */}
+      <Courses />
       <TrainingTimeline />
       <WhatYouGet />
       <PortfolioSection />

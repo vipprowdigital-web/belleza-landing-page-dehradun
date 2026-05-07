@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Calendar } from "lucide-react";
+import { scrollTo } from "../utils/scrollTo";
+import { openWhatsApp } from "../utils/openWhatsapp";
 
 const FinalCTA = () => {
   return (
@@ -36,6 +38,7 @@ const FinalCTA = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-2.5 bg-primary text-light rounded-full font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary transition-all hover:bg-secondary"
+                onClick={() => scrollTo("contact")}
               >
                 <Calendar className="w-5 h-5 text-accent" />
                 Book Free Counselling
@@ -45,6 +48,7 @@ const FinalCTA = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-2.5 bg-light text-primary border-2 border-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-light transition-all"
+                onClick={openWhatsApp}
               >
                 <Phone className="w-5 h-5" />
                 Call Now

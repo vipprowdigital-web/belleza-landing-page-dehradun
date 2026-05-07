@@ -43,7 +43,7 @@ const careerPaths = [
 
 const CareerOpportunities = () => {
   return (
-    <section className="py-24 px-6 bg-light" id="career">
+    <section className="py-15 px-6 bg-light" id="career">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -114,7 +114,7 @@ const CareerOpportunities = () => {
               <h4 className="text-accent font-bold uppercase tracking-widest text-sm mb-2">
                 Infinite Possibilities
               </h4>
-              <p className="text-light text-xl md:text-2xl max-w-xl leading-relaxed tracking-tight">
+              <p className="text-light text-sm sm:text-xl md:text-2xl max-w-xl leading-relaxed tracking-tight">
                 Work in{" "}
                 <span className="text-accent font-semibold">
                   bridal studios

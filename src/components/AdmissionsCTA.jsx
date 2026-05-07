@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { scrollTo } from "../utils/scrollTo";
 
 const AdmissionsCTA = () => {
   return (
@@ -73,6 +74,7 @@ const AdmissionsCTA = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto px-10 py-3 bg-primary text-light rounded-full font-semibold tracking-tight text-md shadow-2xl shadow-primary flex items-center justify-center gap-2 group transition-all duration-300 hover:bg-secondary"
+            onClick={() => scrollTo("contact")}
           >
             Apply Now
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -81,7 +83,8 @@ const AdmissionsCTA = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-10 py-3 bg-accent text-primary border-2 border-secondary rounded-full font-semibold tracking-tight text-md flex items-center justify-center gap-2 transition-all duration-300 hover:bg-light"
+            className="w-full sm:w-auto px-10 py-2.5 bg-accent text-primary border-2 border-secondary rounded-full font-semibold tracking-tight text-md flex items-center justify-center gap-2 transition-all duration-300 hover:bg-light"
+            onClick={() => scrollTo("contact")}
           >
             <MessageCircle className="w-5 h-5" />
             Get Course Details

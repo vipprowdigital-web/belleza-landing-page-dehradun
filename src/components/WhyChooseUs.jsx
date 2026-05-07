@@ -49,7 +49,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="pt-24 px-6 bg-light overflow-hidden">
+    <section className="py-20 sm:py-24 px-6 bg-light overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
               whileHover={{ y: -10 }}
               className="group bg-light p-8 rounded-4xl shadow-sm hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 border border-secondary"
             >
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary text-secondary transition-colors duration-300 bg-secondary-20">
+              <div className="w-8 h-8 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-primary text-secondary transition-colors duration-300 bg-secondary-30">
                 {item.icon}
               </div>
 
@@ -99,13 +99,6 @@ const WhyChooseUs = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom Call to Action */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-20 p-1 bg-linear-to-r from-transparent via-accent/30 to-transparent"
-        />
       </div>
     </section>
   );

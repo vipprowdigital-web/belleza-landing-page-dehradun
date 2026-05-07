@@ -33,7 +33,7 @@ const StudentExperience = () => {
 
   return (
     <section
-      className="py-20 mb-10 px-6 bg-primary relative overflow-hidden min-h-140 flex items-center"
+      className="w-full sm:w-1/2 py-20 px-6 bg-primary relative overflow-hidden sm:min-h-120 flex items-center"
       id="testimony"
     >
       {/* Decorative Background Elements */}

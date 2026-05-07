@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { scrollTo } from "../utils/scrollTo";
 
 const benefits = [
   "Practical classroom training",
@@ -18,7 +19,7 @@ const benefits = [
 
 const WhatYouGet = () => {
   return (
-    <section className="py-24 px-6 bg-light overflow-hidden">
+    <section className="py-24 sm:px-6 bg-light overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side: Content */}
@@ -27,6 +28,7 @@ const WhatYouGet = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="px-6 sm:px-6"
           >
             <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4">
               Your Career Journey
@@ -65,6 +67,7 @@ const WhatYouGet = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-12 bg-primary text-light px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:bg-accent hover:text-primary transition-all duration-300"
+              onClick={() => scrollTo("contact")}
             >
               Start Your Journey
             </motion.button>
@@ -82,11 +85,11 @@ const WhatYouGet = () => {
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
             <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/5 rounded-full blur-2xl -z-10" />
 
-            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative sm:rounded-[3rem] overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"
                 alt="Academy Environment"
-                className="w-full h-150 object-cover hover:scale-110 transition-transform duration-700"
+                className="w-full sm:h-150 object-cover hover:scale-110 transition-transform duration-700"
               />
 
               {/* Overlay Badge */}

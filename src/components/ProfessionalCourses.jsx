@@ -220,13 +220,13 @@ const ProfessionalCourses = () => {
 
   return (
     <section
-      className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light"
+      className="w-full sm:w-3/4 py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light"
       id="courses"
     >
       <div className="mx-auto">
         {/* Heading */}
-        <div className="text-center mb-10 sm:mb-14 md:mb-16">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">
+        <div className="text-center mb-10">
+          <h2 className="text-primary text-4xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">
             Our Professional{" "}
             <span className="text-secondary italic font-serif">Courses</span>
           </h2>
@@ -237,7 +237,7 @@ const ProfessionalCourses = () => {
         </div>
 
         {/* Tabs (Scrollable on Mobile) */}
-        <div className="mb-8 sm:mb-12 overflow-x-auto">
+        <div className="mb-8 sm:mb-12 overflow-x-auto no-scrollbar">
           <div className="flex w-max mx-auto gap-2 p-2">
             {Object.keys(courseData).map((tab) => (
               <button
