@@ -13,7 +13,7 @@ const FinalCTA = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 px-8"
+            className="space-y-8 px-4 sm:px-8"
           >
             <div>
               <h2 className="text-primary text-2xl md:text-5xl font-bold tracking-tighter leading-tight mb-3">
@@ -57,7 +57,7 @@ const FinalCTA = () => {
 
             {/* Contact Details */}
             <div className="pt-8 border-t border-secondary/10 space-y-4">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start sm:gap-2">
                 <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
@@ -71,7 +71,7 @@ const FinalCTA = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start sm:gap-2">
                 <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>

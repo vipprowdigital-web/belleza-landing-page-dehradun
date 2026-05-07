@@ -5,7 +5,7 @@ import LeadForm from "./components/LeadForm";
 // import { motion } from "framer-motion";
 // import { MapPin, Phone } from "lucide-react";
 import WhyChooseUs from "./components/WhyChooseUs";
-import ProfessionalCourses from "./components/ProfessionalCourses";
+// import ProfessionalCourses from "./components/ProfessionalCourses";
 import TrainingTimeline from "./components/TrainingTimeline";
 import WhatYouGet from "./components/WhatYouGet";
 import PortfolioSection from "./components/PortfolioSection";
