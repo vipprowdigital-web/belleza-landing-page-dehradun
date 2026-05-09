@@ -219,10 +219,7 @@ const ProfessionalCourses = () => {
   const [activeTab, setActiveTab] = useState("Makeup");
 
   return (
-    <section
-      className="w-full sm:w-3/4 py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light"
-      id="courses"
-    >
+    <section className="w-full sm:w-3/4 py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-light">
       <div className="mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">

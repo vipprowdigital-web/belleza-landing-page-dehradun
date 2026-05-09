@@ -1,18 +1,43 @@
-import {
-  Phone,
-  MapPin,
-  Globe,
-  //   Instagram,
-  //   Facebook,
-  //   Youtube,
-} from "lucide-react";
+import { Phone, MapPin, Globe } from "lucide-react";
 import { scrollTo } from "../utils/scrollTo";
+import { openWhatsApp } from "../utils/openWhatsapp";
 
-const Footer = () => {
+const Footer = ({ appConfig }) => {
   const currentYear = new Date().getFullYear();
-  const openWhatsApp = () => {
-    window.open("https://wa.me/919012360088", "_blank");
-  };
+
+  const socials = [
+    {
+      name: "Facebook",
+      link: appConfig.facebookLink,
+      path: (
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      ),
+      hover: "hover:text-blue-600",
+    },
+    {
+      name: "Instagram",
+      link: appConfig.instagramLink,
+      path: (
+        <>
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </>
+      ),
+      hover: "hover:text-pink-600",
+    },
+    {
+      name: "Gmail",
+      link: `mailto:${appConfig.email}`,
+      path: (
+        <>
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </>
+      ),
+      hover: "hover:text-red-500",
+    },
+  ];
 
   return (
     <footer className="w-full bg-primary text-light pt-16 pb-8 sm:px-20 px-6">
@@ -33,6 +58,31 @@ const Footer = () => {
               Professional Makeup, Hair, Nail, Beauty, Skin & Cosmetology
               Courses. Empowering the next generation of beauty professionals.
             </p>
+            <div className="flex gap-5 items-center">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.link}
+                  target={social.name === "Gmail" ? "_self" : "_blank"}
+                  rel="noopener noreferrer"
+                  className={`text-primary bg-light rounded-full p-1.5 transition-all duration-300 transform hover:scale-125 ${social.hover}`}
+                  aria-label={`Contact us via ${social.name}`}
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    {social.path}
+                  </svg>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -107,19 +157,23 @@ const Footer = () => {
               Visit Us
             </h4>
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <p className="text-sm text-light/70 leading-relaxed">
-                  Near Fountain Chowk, Nehru Colony, Drone Puri, <br />
-                  Dharampur, Dehradun, Uttarakhand 248001
-                </p>
-              </div>
+              {appConfig?.companyAddress && appConfig.companyAddress[0] && (
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <p className="text-sm text-light/70 leading-relaxed">
+                    {appConfig?.companyAddress[0].address}
+                  </p>
+                </div>
+              )}
               <div
                 className="flex items-center gap-3 cursor-pointer"
-                onClick={openWhatsApp}
+                onClick={() => openWhatsApp(appConfig.phoneNumber)}
               >
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <p className="text-sm text-light/70">+91 90123 60088</p>
+                <p className="text-sm text-light/70">
+                  +91{" "}
+                  {appConfig.phoneNumber?.replace(/(\d{5})(\d{5})/, "$1 $2")}
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-accent shrink-0" />

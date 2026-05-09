@@ -79,8 +79,8 @@ const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="pt-24 px-6 bg-light" id="faqs">
-      <div className="w-full mx-auto">
+    <section className="w-full pt-24 px-6 bg-light" id="faqs">
+      <div className="w-full sm:w-3/4 lg:w-1/2 mx-auto">
         {/* Header */}
         <div className="mb-10">
           <motion.span

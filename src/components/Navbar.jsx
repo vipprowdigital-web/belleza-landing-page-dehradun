@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { scrollTo } from "../utils/scrollTo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,6 +85,7 @@ const Navbar = () => {
           </a> */}
           <button
             className={`px-6 py-2.5 rounded-full font-bold text-sm shadow-xl shadow-primary hover:bg-secondary transition-all ${scrolled ? "bg-accent text-primary" : "bg-primary text-light"}`}
+            onClick={() => scrollTo("contact")}
           >
             Apply Now
           </button>
@@ -125,7 +127,13 @@ const Navbar = () => {
               >
                 <Phone /> 90123 60088
               </a> */}
-              <button className="bg-accent text-primary px-10 py-4 rounded-full font-black text-lg">
+              <button
+                className="bg-accent text-primary px-10 py-4 rounded-full font-black text-lg"
+                onClick={() => {
+                  scrollTo("contact");
+                  setIsOpen(false);
+                }}
+              >
                 APPLY NOW
               </button>
             </div>

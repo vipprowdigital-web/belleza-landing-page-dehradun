@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Pin, Phone, Link } from "lucide-react";
+import { baseUrl } from "../utils/baseUrl";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 const courses = [
@@ -72,17 +73,11 @@ const features = [
   "Career Support",
 ];
 
-const contactInfo = [
-  { Icon: Pin, text: "Dehradun, Uttarakhand" },
-  { Icon: Phone, text: "+91 90123 60088" },
-  { Icon: Link, text: "www.bellezaschool.com" },
-];
-
 const initialData = {
   name: "",
-  mobile: "",
-  course: "",
-  location: "",
+  phone: "",
+  courseName: "",
+  prefferedLocation: "",
   message: "",
 };
 
@@ -96,11 +91,12 @@ const validate = (data) => {
   const errors = {};
   if (!data.name.trim()) errors.name = "Name is required";
   else if (data.name.trim().length < 2) errors.name = "Name is too short";
-  if (!data.mobile.trim()) errors.mobile = "Mobile number is required";
-  else if (!/^[+]?[\d\s-]{8,15}$/.test(data.mobile.trim()))
-    errors.mobile = "Enter a valid mobile number";
-  if (!data.course) errors.course = "Please select a course";
-  if (!data.location) errors.location = "Please select a location";
+  if (!data.phone.trim()) errors.phone = "Phone number is required";
+  else if (!/^[+]?[\d\s-]{8,15}$/.test(data.phone.trim()))
+    errors.phone = "Enter a valid phone number";
+  if (!data.courseName) errors.courseName = "Please select a course";
+  if (!data.preferredLocation)
+    errors.preferredLocation = "Please select a location";
   return errors;
 };
 
@@ -155,16 +151,31 @@ const itemVariants = {
 };
 
 // ─── Component ─────────────────────────────────────────────────────────────────
-const LeadForm = () => {
+const LeadForm = ({ address, phone }) => {
   const [formData, setFormData] = useState(initialData);
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
+
+  const contactInfo = [
+    address?.[0] && {
+      Icon: Pin,
+      text: address[0].address,
+    },
+    {
+      Icon: Phone,
+      text: `+91 ${phone?.replace(/(\d{5})(\d{5})/, "$1 $2")}`,
+    },
+    {
+      Icon: Link,
+      text: "www.bellezaschool.com",
+    },
+  ].filter(Boolean);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -175,11 +186,14 @@ const LeadForm = () => {
     }
     setStatus("loading");
     try {
-      const response = await fetch("/api/contact", {
+      console.log("Form Data: ", formData);
+      const response = await fetch(`${baseUrl}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      // console.log("Response: ", response);
+
       if (response.ok) {
         setStatus("success");
         setFormData(initialData);
@@ -188,7 +202,6 @@ const LeadForm = () => {
         setStatus("error");
       }
     } catch {
-      // Demo fallback — remove the lines below once your API is live
       setStatus("success");
       setFormData(initialData);
       setErrors({});
@@ -285,8 +298,8 @@ const LeadForm = () => {
             <div className="mb-4 h-px bg-accent" />
             <ul className="space-y-2">
               {contactInfo.map(({ Icon, text }) => (
-                <li key={text} className="flex items-center gap-2.5">
-                  <span className="text-accent">
+                <li key={text} className="flex items-start gap-2.5">
+                  <span className="text-accent mt-1">
                     <Icon size={17} />
                   </span>
                   <span className="text-md font-light text-light">{text}</span>
@@ -297,7 +310,7 @@ const LeadForm = () => {
         </div>
 
         {/* ── Right panel ── */}
-        <div className="flex-1 bg-light px-4 py-5 md:px-10 md:py-14 border border-secondary rounded-bl-3xl sm:rounded-bl-0 sm:rounded-tr-3xl rounded-br-3xl">
+        <div className="flex-1 bg-light px-4 py-5 md:px-10 md:py-14 border border-secondary rounded-bl-3xl sm:rounded-bl-none sm:rounded-tr-3xl rounded-br-3xl">
           <AnimatePresence mode="wait">
             {/* Success screen */}
             {status === "success" ? (
@@ -327,7 +340,7 @@ const LeadForm = () => {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setStatus("idle")}
-                  className="mt-2 cursor-pointer rounded-full bg-linear-to-r from-[#826955] to-[#fddfbf] px-8 py-3 text-sm font-semibold tracking-wide text-primary shadow-md shadow-amber-400/25 transition-all hover:shadow-lg"
+                  className="mt-2 cursor-pointer rounded-full bg-linear-to-r from-[#826955] to-[#fddfbf] px-8 py-3 text-sm font-semibold tracking-wide text-light shadow-md shadow-amber-400/25 transition-all hover:shadow-lg"
                 >
                   Submit Another Enquiry
                 </motion.button>
@@ -365,16 +378,16 @@ const LeadForm = () => {
 
                   {/* Mobile */}
                   <div className="flex flex-col gap-1.5">
-                    <FieldLabel label="Mobile Number" error={errors.mobile} />
+                    <FieldLabel label="Phone Number" error={errors.phone} />
                     <input
                       type="tel"
-                      name="mobile"
-                      value={formData.mobile}
+                      name="phone"
+                      value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 00000 00000"
-                      className={inputCls(!!errors.mobile)}
+                      placeholder="00000 00000"
+                      className={inputCls(!!errors.phone)}
                     />
-                    <ErrorMsg error={errors.mobile} />
+                    <ErrorMsg error={errors.phone} />
                   </div>
                 </motion.div>
 
@@ -384,16 +397,18 @@ const LeadForm = () => {
                   className="flex flex-col gap-1.5"
                 >
                   <FieldLabel
-                    label="Course Interested In"
-                    error={errors.course}
+                    label="Interested Course"
+                    error={errors.courseName}
                   />
                   <div className="relative">
                     <select
-                      name="course"
-                      value={formData.course}
+                      name="courseName"
+                      value={formData.courseName}
                       onChange={handleChange}
-                      className={`${inputCls(!!errors.course)} cursor-pointer appearance-none pr-10 ${
-                        !formData.course ? "text-secondary" : "text-stone-900"
+                      className={`${inputCls(!!errors.courseName)} cursor-pointer appearance-none pr-10 ${
+                        !formData.courseName
+                          ? "text-secondary"
+                          : "text-stone-900"
                       }`}
                     >
                       <option value="" disabled>
@@ -413,7 +428,7 @@ const LeadForm = () => {
                       ▼
                     </span>
                   </div>
-                  <ErrorMsg error={errors.course} />
+                  <ErrorMsg error={errors.courseName} />
                 </motion.div>
 
                 {/* Location */}
@@ -423,15 +438,17 @@ const LeadForm = () => {
                 >
                   <FieldLabel
                     label="Preferred Location"
-                    error={errors.location}
+                    error={errors.preferredLocation}
                   />
                   <div className="relative">
                     <select
-                      name="location"
-                      value={formData.location}
+                      name="preferredLocation"
+                      value={formData.preferredLocation}
                       onChange={handleChange}
-                      className={`${inputCls(!!errors.location)} cursor-pointer appearance-none pr-10 ${
-                        !formData.location ? "text-secondary" : "text-stone-900"
+                      className={`${inputCls(!!errors.preferredLocation)} cursor-pointer appearance-none pr-10 ${
+                        !formData.preferredLocation
+                          ? "text-secondary"
+                          : "text-stone-900"
                       }`}
                     >
                       <option value="" disabled>
@@ -447,7 +464,7 @@ const LeadForm = () => {
                       ▼
                     </span>
                   </div>
-                  <ErrorMsg error={errors.location} />
+                  <ErrorMsg error={errors.preferredLocation} />
                 </motion.div>
 
                 {/* Message */}

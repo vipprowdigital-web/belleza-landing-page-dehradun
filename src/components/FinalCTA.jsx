@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin, Calendar } from "lucide-react";
 import { scrollTo } from "../utils/scrollTo";
-import { openWhatsApp } from "../utils/openWhatsapp";
 
-const FinalCTA = () => {
+const FinalCTA = ({ address, phone }) => {
   return (
     <section className="py-20 bg-light relative overflow-hidden">
       <div className="max-w-8xl mx-auto">
@@ -44,15 +43,15 @@ const FinalCTA = () => {
                 Book Free Counselling
               </motion.button>
 
-              <motion.button
+              <motion.a
+                href={`tel:${phone}`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-2.5 bg-light text-primary border-2 border-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-light transition-all"
-                onClick={openWhatsApp}
               >
                 <Phone className="w-5 h-5" />
                 Call Now
-              </motion.button>
+              </motion.a>
             </div>
 
             {/* Contact Details */}
@@ -66,25 +65,26 @@ const FinalCTA = () => {
                     Phone
                   </p>
                   <p className="text-primary font-bold text-lg leading-none">
-                    +91 90123 60088
+                    +91 {phone?.replace(/(\d{5})(\d{5})/, "$1 $2")}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start sm:gap-2">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
+              {address?.[0] && (
+                <div className="flex items-start sm:gap-2">
+                  <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-secondary font-bold">
+                      Address
+                    </p>
+                    <p className="text-secondary font-semibold text-sm leading-relaxed max-w-sm">
+                      {address[0]?.address}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-secondary font-bold">
-                    Address
-                  </p>
-                  <p className="text-secondary font-semibold text-sm leading-relaxed max-w-sm">
-                    Near Fountain Chowk, Nehru Colony, Drone Puri, Dharampur,
-                    Dehradun, Uttarakhand 248001
-                  </p>
-                </div>
-              </div>
+              )}
             </div>
           </motion.div>
 
@@ -96,7 +96,7 @@ const FinalCTA = () => {
             className="relative"
           >
             {/* Geometric Background Element */}
-            <div className="absolute -inset-4 border-2 border-accent rounded-[3rem] translate-x-4 translate-y-4 -z-10" />
+            <div className="absolute -inset-4 translate-x-4 translate-y-4 -z-10" />
 
             <div className="aspect-3/3 overflow-hidden relative group">
               <img
