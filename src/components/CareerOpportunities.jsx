@@ -62,7 +62,7 @@ const CareerOpportunities = () => {
             transition={{ duration: 0.8 }}
             className="md:max-w-xl"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
+            <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
               Career <br />
               <span className="text-secondary">Opportunities</span>
             </h2>

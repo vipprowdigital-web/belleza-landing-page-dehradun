@@ -55,10 +55,10 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 sm:py-28 px-6 bg-light overflow-hidden">
+    <section className="pb-10 sm:py-28 px-6 bg-light overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="sm:text-center mb-5 sm:mb-16">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const WhyChooseUs = () => {
             Why Choose Belleza{" "}
             <span className="text-secondary">Beauty School?</span>
           </motion.h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full opacity-50" />
+          <div className="w-24 h-1 bg-secondary sm:mx-auto mt-3 sm:mt-6 rounded-full opacity-50" />
         </div>
 
         {/* Feature Rows */}
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08, duration: 0.7 }}
-                className="group grid grid-cols-[auto_1fr] md:grid-cols-[80px_1fr_2fr] gap-x-6 md:gap-x-10 gap-y-2 py-8 md:py-10 items-start hover:bg-secondary transition-colors duration-300 rounded-2xl px-4 -mx-4"
+                className="group grid grid-cols-[auto_1fr] md:grid-cols-[80px_1fr_2fr] gap-x-6 md:gap-x-10 gap-y-2 py-5 sm:py-8 md:py-10 items-start hover:bg-secondary transition-colors duration-300 sm:rounded-2xl mx-1 sm:-mx-4"
               >
                 {/* Number + Icon (stacked on mobile, side-by-side on md) */}
                 <div className="flex flex-col items-center gap-3 pt-1">
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
 
                 {/* Title */}
                 <div className="flex items-center h-full sm:items-start pt-1 md:pt-2">
-                  <h3 className="text-primary text-lg md:text-xl font-bold group-hover:text-secondary transition-colors duration-300">
+                  <h3 className="text-primary text-md md:text-xl font-bold group-hover:text-secondary transition-colors duration-300">
                     {item.title}
                   </h3>
                 </div>

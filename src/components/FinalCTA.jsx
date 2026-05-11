@@ -98,7 +98,7 @@ const FinalCTA = ({ address, phone }) => {
 
             <div className="aspect-3/3 overflow-hidden relative group">
               <img
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop"
+                src="/assets/images/belleza-4.jpeg"
                 alt="Professional Beauty Training"
                 className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 loading="lazy"

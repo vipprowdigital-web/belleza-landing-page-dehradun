@@ -17,12 +17,13 @@ const DehradunHero = ({ address, phone }) => {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/assets/images/makeup-bg.jpg"
+          src="/assets/images/belleza-3.jpeg"
           alt="Belleza Dehradun Academy"
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-red-900/40 via-red-800/10 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-1/2 bg-linear-to-r from-black/80 to-transparent" />
+        {/* <div className="absolute inset-0 bg-linear-to-r from-red-900/40 via-red-800/10 to-transparent" /> */}
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
@@ -32,7 +33,7 @@ const DehradunHero = ({ address, phone }) => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-7xl font-black text-accent tracking-tighter leading-[0.9]"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary tracking-tighter leading-[0.9]"
             >
               Become a <br />
               <span className="text-light">Certified</span> <br />
@@ -44,7 +45,7 @@ const DehradunHero = ({ address, phone }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-accent text-lg md:text-xl font-medium max-w-2xl leading-tight"
+              className="sm:block hidden text-accent text-lg md:text-xl font-medium max-w-2xl leading-tight"
             >
               Learn professional{" "}
               <span className="text-light ">
@@ -55,7 +56,7 @@ const DehradunHero = ({ address, phone }) => {
             </motion.p>
 
             {/* Secondary Tagline */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
@@ -65,7 +66,7 @@ const DehradunHero = ({ address, phone }) => {
               <p className="text-sm uppercase tracking-widest">
                 International-Standard Training & Certification
               </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Actions */}
             <motion.div
@@ -75,7 +76,7 @@ const DehradunHero = ({ address, phone }) => {
               className="flex flex-wrap gap-5 pt-4"
             >
               <button
-                className="bg-accent text-primary px-10 py-3 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-3 group"
+                className="bg-accent text-primary px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-3 group"
                 onClick={() => scrollTo("contact")}
               >
                 Book Free Counselling
@@ -87,7 +88,7 @@ const DehradunHero = ({ address, phone }) => {
 
               <a
                 href={`tel:${phone}`}
-                className="bg-white/10 backdrop-blur-md border border-white/20 text-light px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white/20 transition-all flex items-center gap-3"
+                className="bg-secondary backdrop-blur-md border border-white/20 text-light px-10 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
               >
                 <Phone size={18} className="text-accent" />
                 Call Now

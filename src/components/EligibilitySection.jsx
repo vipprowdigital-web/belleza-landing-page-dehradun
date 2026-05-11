@@ -45,7 +45,7 @@ const EligibilitySection = () => {
     <section className="py-24 px-6 bg-light">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-7 sm:mb-16">
+        <div className="sm:text-center mb-7 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const EligibilitySection = () => {
             Who Can Join{" "}
             <span className="text-secondary">Belleza Beauty School?</span>
           </motion.h2>
-          <div className="h-1 w-20 bg-secondary mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-secondary sm:mx-auto rounded-full" />
         </div>
 
         {/* Audience Grid */}

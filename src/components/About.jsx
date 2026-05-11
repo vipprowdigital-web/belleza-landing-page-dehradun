@@ -20,9 +20,9 @@ export default function About() {
               {/* Decorative background element */}
               <div className="absolute -top-4 -left-4 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
 
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-120">
                 <img
-                  src="/assets/images/bg-img.jpg"
+                  src="/assets/images/belleza-2.jpeg"
                   alt="Belleza Beauty School Training"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -70,7 +70,7 @@ export default function About() {
                   designed for students who want to build a successful career in
                   the beauty industry.
                 </p>
-                <p>
+                <p className="sm:block hidden">
                   We provide professional training in makeup, hair, nails, skin,
                   beauty and cosmetology through a practical, career-focused
                   learning approach.
@@ -79,7 +79,7 @@ export default function About() {
 
               {/* Feature Grid */}
               <motion.div
-                className="grid grid-cols-2 gap-4 pt-4"
+                className="grid grid-cols-2 gap-4 sm:pt-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -114,18 +114,13 @@ export default function About() {
         transition={{ duration: 0.8 }}
       >
         {/* Stylized Quote Icon */}
-        <div className="text-8xl leading-none text-secondary">
-          &ldquo;
-        </div>
+        <div className="text-8xl leading-none text-secondary">&ldquo;</div>
 
         <p className="font-bold text-3xl md:text-4xl leading-tighter text-primary max-w-4xl mx-auto mb-10 tracking-tighter">
           At Belleza, students don’t just learn techniques —
           <br />
           they learn how to work confidently in the{" "}
-          <span className="text-secondary ">
-            {" "}
-            real beauty industry.
-          </span>
+          <span className="text-secondary "> real beauty industry.</span>
         </p>
 
         {/* Pulsing Status Indicator */}

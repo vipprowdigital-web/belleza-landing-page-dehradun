@@ -222,7 +222,7 @@ const LeadForm = ({ address, phone }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-12 text-center"
+        className="mb-12 sm:text-center px-4"
       >
         <p className="mb-2.5 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-secondary">
           ✦ Enroll Today ✦
@@ -230,7 +230,7 @@ const LeadForm = ({ address, phone }) => {
         <h2 className="text-4xl font-bold tracking-tight text-primary md:text-5xl">
           Begin Your <span className="text-secondary ">Beauty Journey</span>
         </h2>
-        <div className="mx-auto mt-4 h-0.5 w-16 bg-linear-to-r from-transparent via-[#826955] to-transparent" />
+        <div className="sm:mx-auto mt-4 h-0.5 w-16 bg-linear-to-r from-transparent via-[#826955] to-transparent" />
       </motion.div>
       {/* Main card */}
       <motion.div

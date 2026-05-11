@@ -34,7 +34,7 @@ const WhatYouGet = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold text-primary tracking-tighter leading-none mb-7">
+              <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter leading-[0.9] sm:mb-7 mb-3">
                 What You Get at <br />
                 <span className="text-secondary">Belleza</span>
               </h2>
@@ -89,7 +89,7 @@ const WhatYouGet = () => {
               {/* Main Image Frame */}
               <div className="relative rounded-[4rem] rounded-tr-none overflow-hidden aspect-4/5 shadow-3xl border-8 border-accent h-96 sm:h-140">
                 <img
-                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/2_zdyomb.png"
+                  src="/assets/images/belleza-5.jpeg"
                   alt="Academy Environment"
                   className="w-full h-full object-cover"
                 />

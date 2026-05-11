@@ -40,7 +40,7 @@ const TrainingTimeline = () => {
       <div className="max-w-7xl mx-auto relative">
         {" "}
         {/* Added relative here */}
-        <div className="text-center mb-16">
+        <div className="sm:text-center mb-16">
           <h2 className="text-primary text-4xl md:text-5xl font-bold tracking-tight">
             How We <span className="text-secondary">Train</span> Our Students
           </h2>

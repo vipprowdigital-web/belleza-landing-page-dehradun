@@ -15,7 +15,7 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-8"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
+            <h2 className="text-4xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
               Build Your <br />
               <span className="text-secondary">Professional</span> <br />
               Portfolio
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
           </motion.div>
 
           {/* Right: The Mosaic Grid */}
-          <div className="lg:col-span-7 grid grid-cols-2 gap-4 h-150">
+          <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:h-150">
             {/* Large Feature Image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ const PortfolioSection = () => {
               <img
                 src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/SFX_Makeup_Look_djmou2.png"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                alt="Bridal Look"
+                alt="Portfolio Image 1"
               />
             </motion.div>
 
@@ -63,12 +63,12 @@ const PortfolioSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="relative rounded-4xl overflow-hidden group"
+                className="relative rounded-4xl overflow-hidden group sm:h-70"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop"
+                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/hair_lfkqsp.png"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  alt="Nail Art"
+                  alt="Portfolio Image 2"
                 />
               </motion.div>
 
@@ -77,12 +77,12 @@ const PortfolioSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="relative rounded-4xl overflow-hidden group"
+                className="relative rounded-4xl overflow-hidden group sm:h-75"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop"
+                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/eye_makeup_mfwkif.png"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  alt="Hair Styling"
+                  alt="Portfolio Image 3"
                 />
               </motion.div>
             </div>
