@@ -57,7 +57,7 @@ const FloatingContact = ({ appConfig }) => {
         {/* Address Item */}
         {appConfig.companyAddress && (
           <motion.div
-            className="flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg border border-light"
+            className="sm:hidden flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg border border-light"
             initial="collapsed"
             whileHover="expanded"
             animate={isMapExpanded ? "expanded" : "collapsed"}

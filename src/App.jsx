@@ -51,7 +51,10 @@ function App() {
   return (
     <div className="flex flex-col justify-center items-center bg-light">
       <Navbar />
-      <HeroSection />
+      <HeroSection
+        address={appConfig.companyAddress}
+        phone={appConfig.phoneNumber}
+      />
       <LeadForm
         address={appConfig.companyAddress}
         phone={appConfig.phoneNumber}
