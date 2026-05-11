@@ -90,6 +90,7 @@ const WhatYouGet = () => {
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"
                 alt="Academy Environment"
                 className="w-full sm:h-150 object-cover hover:scale-110 transition-transform duration-700"
+                loading="lazy"
               />
 
               {/* Overlay Badge */}

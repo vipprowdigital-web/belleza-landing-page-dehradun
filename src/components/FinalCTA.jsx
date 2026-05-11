@@ -103,6 +103,7 @@ const FinalCTA = ({ address, phone }) => {
                 src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop"
                 alt="Professional Beauty Training"
                 className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                loading="lazy"
               />
               {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent opacity-60" />

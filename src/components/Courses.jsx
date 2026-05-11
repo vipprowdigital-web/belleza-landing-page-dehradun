@@ -142,6 +142,7 @@ export default function Courses() {
                         src={course.image || "/api/placeholder/400/320"}
                         alt={course.name}
                         className="w-full h-full object-cover transition-transform rounded-2xl duration-700 group-hover:scale-110"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent opacity-60" />
                       <div className="absolute top-5 left-5 px-4 py-1 bg-secondary backdrop-blur-md border border-white/30 rounded-full">

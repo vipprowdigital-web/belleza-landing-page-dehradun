@@ -20,6 +20,7 @@ const DehradunHero = ({ address, phone }) => {
           src="/assets/images/makeup-bg.jpg"
           alt="Belleza Dehradun Academy"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-linear-to-r from-red-900/40 via-red-800/10 to-transparent" />
       </motion.div>

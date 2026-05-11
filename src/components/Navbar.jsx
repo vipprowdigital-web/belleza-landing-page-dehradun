@@ -53,6 +53,7 @@ const Navbar = () => {
             src="/assets/images/logos/belleza_logo.svg"
             alt="Belleza Logo"
             className="w-25 object-contain"
+            loading="lazy"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
