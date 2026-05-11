@@ -241,7 +241,7 @@ const LeadForm = ({ address, phone }) => {
         className="mx-auto flex max-w-5xl flex-col overflow-hidden rounded-3xl shadow-2xl shadow-amber-900/10 md:flex-row"
       >
         {/* ── Left panel ── */}
-        <div className="relative flex flex-col justify-between overflow-hidden bg-linear-to-br from-[#826955] to-[#826955] px-5 py-5 md:w-2/5 md:px-10 md:py-14">
+        <div className="relative flex flex-col justify-between overflow-hidden bg-linear-to-br from-[#791535] to-[#791535] px-5 py-5 md:w-2/5 md:px-10 md:py-14">
           {/* Right border line */}
           <div className="absolute inset-y-0 right-0 w-px bg-linear-to-b from-transparent via-[#fddfbf] to-transparent" />
           {/* Gold glow */}
@@ -257,7 +257,7 @@ const LeadForm = ({ address, phone }) => {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-light">
                 Free Counselling
               </p>
-              <h3 className="mb-4 text-3xl font-black leading-tight tracking-tight text-light md:text-4xl">
+              <h3 className="mb-4 text-3xl font-bold leading-tight tracking-tight text-light md:text-4xl">
                 Get Course Details
               </h3>
               <p className="text-md font-light leading-relaxed text-light">
@@ -277,8 +277,10 @@ const LeadForm = ({ address, phone }) => {
             >
               {features.map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  <span className="text-md font-light text-accent">{item}</span>
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-light" />
+                  <span className="text-md font-semibold text-light ">
+                    {item}
+                  </span>
                 </li>
               ))}
             </motion.ul>
