@@ -55,15 +55,15 @@ function App() {
         address={appConfig.companyAddress}
         phone={appConfig.phoneNumber}
       />
+      <Courses />
       <LeadForm
         address={appConfig.companyAddress}
         phone={appConfig.phoneNumber}
       />
       <About />
+      <TrainingTimeline />
       <WhyChooseUs />
       {/* <ProfessionalCourses /> */}
-      <Courses />
-      <TrainingTimeline />
       <WhatYouGet />
       <PortfolioSection />
       <CareerOpportunities />

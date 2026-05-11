@@ -35,7 +35,7 @@ const DehradunHero = ({ address, phone }) => {
               className="text-5xl md:text-6xl lg:text-7xl font-black text-accent tracking-tighter leading-[0.9]"
             >
               Become a <br />
-              <span className="text-light italic">Certified</span> <br />
+              <span className="text-light">Certified</span> <br />
               Beauty Professional
             </motion.h1>
 
@@ -47,7 +47,7 @@ const DehradunHero = ({ address, phone }) => {
               className="text-accent text-lg md:text-xl font-medium max-w-2xl leading-tight"
             >
               Learn professional{" "}
-              <span className="text-light italic">
+              <span className="text-light ">
                 Makeup, Hair, Nail, Skin & Cosmetology
               </span>{" "}
               with practical training, live model practice, and expert guidance
@@ -210,7 +210,7 @@ export default DehradunHero;
 //           className="text-right text-md max-w-lg sm:max-w-xl leading-tight tracking-tight text-accent font-semibold"
 //         >
 //           Learn professional{" "}
-//           <span className="font-bold italic">
+//           <span className="font-bold">
 //             Makeup, Hair, Nail, Skin & Cosmetology
 //           </span>{" "}
 //           with practical training, live model practice, expert guidance, and

@@ -62,6 +62,20 @@ export default function Courses() {
 
   return (
     <section className="w-full" id="courses">
+      <div className="text-center mb-10 mt-20">
+        <p className="text-secondary uppercase tracking-widest text-[10px] sm:text-xs font-bold">
+          Explore & Enroll
+        </p>
+        <h2 className="text-primary text-4xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">
+          Featured <span className="text-secondary ">Courses</span>
+        </h2>
+
+        <p className="text-secondary capitalize tracking-tight text-sm sm:text-lg px-3 sm:max-w-2xl text-center mx-auto">
+          Our globally recognized curriculum and career-focused approach help
+          students master beauty skills and confidently step into the
+          professional industry.
+        </p>
+      </div>
       {/* Toggle Offline/Online */}
       <div className="border border-primary grid grid-cols-2 mx-auto h-10 font-bold text-primary sm:text-sm text-xs overflow-hidden">
         <button
@@ -82,21 +96,7 @@ export default function Courses() {
         fn={setActiveSubCategory}
       />
       <div className="my-10"></div>
-      <div className="text-center mb-10">
-        <p className="text-secondary uppercase tracking-widest text-[10px] sm:text-xs font-bold">
-          Explore & Enroll
-        </p>
-        <h2 className="text-primary text-4xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">
-          Featured{" "}
-          <span className="text-secondary italic font-serif">Courses</span>
-        </h2>
 
-        <p className="text-secondary capitalize tracking-tight text-sm sm:text-lg px-3 sm:max-w-2xl text-center mx-auto">
-          Our globally recognized curriculum and career-focused approach help
-          students master beauty skills and confidently step into the
-          professional industry.
-        </p>
-      </div>
       {isSlider && (
         <div className="flex justify-end gap-3 px-2 sm:px-0 sm:mr-30 mr-0">
           <button
@@ -135,7 +135,7 @@ export default function Courses() {
                       delay: index * 0.1,
                     }}
                     key={course.id}
-                    className="group bg-light flex flex-col rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-secondary h-full"
+                    className="group bg-white flex flex-col rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-secondary h-full"
                   >
                     <div className="relative h-64 w-full overflow-hidden">
                       <img

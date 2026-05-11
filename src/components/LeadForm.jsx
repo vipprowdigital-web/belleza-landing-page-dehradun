@@ -211,7 +211,7 @@ const LeadForm = ({ address, phone }) => {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-linear-to-br px-2 py-20 md:px-8"
+      className="relative w-full overflow-hidden bg-linear-to-br px-2 sm:py-20 pt-20 md:px-8"
     >
       {/* Decorative blobs */}
       {/* <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-secondary blur-3xl" />
@@ -228,10 +228,7 @@ const LeadForm = ({ address, phone }) => {
           ✦ Enroll Today ✦
         </p>
         <h2 className="text-4xl font-bold tracking-tight text-primary md:text-5xl">
-          Begin Your{" "}
-          <span className="text-secondary italic font-serif">
-            Beauty Journey
-          </span>
+          Begin Your <span className="text-secondary ">Beauty Journey</span>
         </h2>
         <div className="mx-auto mt-4 h-0.5 w-16 bg-linear-to-r from-transparent via-[#826955] to-transparent" />
       </motion.div>
@@ -260,7 +257,7 @@ const LeadForm = ({ address, phone }) => {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-light">
                 Free Counselling
               </p>
-              <h3 className="mb-4 font-serif text-3xl font-black leading-tight tracking-tight text-light md:text-4xl">
+              <h3 className="mb-4 text-3xl font-black leading-tight tracking-tight text-light md:text-4xl">
                 Get Course Details
               </h3>
               <p className="text-md font-light leading-relaxed text-light">
@@ -329,7 +326,7 @@ const LeadForm = ({ address, phone }) => {
                 >
                   ✓
                 </motion.div>
-                <h3 className="font-serif text-3xl font-bold text-primary">
+                <h3 className=" text-3xl font-bold text-primary">
                   We'll Be in Touch!
                 </h3>
                 <p className="max-w-xs text-sm leading-relaxed text-secondary">

@@ -62,7 +62,7 @@ const StudentExperience = () => {
           </motion.div>
           <h2 className="text-light text-3xl md:text-5xl font-bold tracking-tight">
             Voices of{" "}
-            <span className="italic font-serif text-accent">Confidence</span>
+            <span className=" text-accent">Confidence</span>
           </h2>
         </div>
 
@@ -83,7 +83,7 @@ const StudentExperience = () => {
                 transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-20"
               >
-                <p className="text-light text-md md:text-xl font-medium leading-relaxed mb-8 italic">
+                <p className="text-light text-md md:text-xl font-medium leading-relaxed mb-8">
                   "{testimonials[index].description.replace(/<\/?p>/g, "")}"
                 </p>
 

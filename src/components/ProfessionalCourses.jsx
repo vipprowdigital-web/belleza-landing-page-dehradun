@@ -225,7 +225,7 @@ const ProfessionalCourses = () => {
         <div className="text-center mb-10">
           <h2 className="text-primary text-4xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">
             Our Professional{" "}
-            <span className="text-secondary italic font-serif">Courses</span>
+            <span className="text-secondary italic">Courses</span>
           </h2>
 
           <p className="text-secondary uppercase tracking-widest text-[10px] sm:text-xs font-bold">

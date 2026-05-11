@@ -17,9 +17,7 @@ const FinalCTA = ({ address, phone }) => {
             <div>
               <h2 className="text-primary text-2xl md:text-5xl font-bold tracking-tighter leading-tight mb-3">
                 Ready to Start Your <br />
-                <span className="text-secondary italic font-serif">
-                  Beauty Career?
-                </span>
+                <span className="text-secondary">Beauty Career?</span>
               </h2>
               <p className="text-secondary text-md md:text-lg leading-tight max-w-xl">
                 Join Belleza Beauty School Dehradun and learn professional
@@ -109,7 +107,7 @@ const FinalCTA = ({ address, phone }) => {
               <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent opacity-60" />
 
               {/* Floating Badge */}
-              <div className="absolute bottom-8 left-8  backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/20">
+              <div className="sm:block hidden absolute bottom-8 left-8  backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/20">
                 <p className="text-primary font-bold text-sm">
                   Enrollment Open
                 </p>

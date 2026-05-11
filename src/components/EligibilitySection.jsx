@@ -45,22 +45,20 @@ const EligibilitySection = () => {
     <section className="py-24 px-6 bg-light">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-7 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-primary text-4xl md:text-5xl font-bold tracking-tight mb-4"
           >
             Who Can Join{" "}
-            <span className="text-secondary italic font-serif">
-              Belleza Beauty School?
-            </span>
+            <span className="text-secondary">Belleza Beauty School?</span>
           </motion.h2>
           <div className="h-1 w-20 bg-secondary mx-auto rounded-full" />
         </div>
 
         {/* Audience Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {candidates.map((item, index) => (
             <motion.div
               key={index}
@@ -68,7 +66,7 @@ const EligibilitySection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5, borderColor: "var(--accent)" }}
-              className="p-6 rounded-3xl border border-secondary/10 bg-light/30 flex flex-col items-center text-center transition-all duration-300"
+              className="p-6 rounded-3xl border border-secondary bg-white flex flex-col items-center text-center transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-primary text-accent flex items-center justify-center mb-4 shadow-lg shadow-primary">
                 {item.icon}
@@ -102,7 +100,7 @@ const EligibilitySection = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 text-center max-w-2xl mx-auto"
         >
-          <p className="text-secondary font-bold text-lg leading-relaxed italic">
+          <p className="text-secondary font-bold text-lg leading-relaxed">
             "No previous experience is required. You can start from basic level
             and grow step by step."
           </p>

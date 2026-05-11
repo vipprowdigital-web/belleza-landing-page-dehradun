@@ -4,9 +4,9 @@ import { scrollTo } from "../utils/scrollTo";
 
 const AdmissionsCTA = () => {
   return (
-    <section className="relative py-24 px-6 bg-light overflow-hidden flex flex-col items-center justify-center">
+    <section className="relative pb-10 sm:py-24 px-6 bg-light overflow-hidden flex flex-col items-center justify-center">
       {/* Large Background Decorative Text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">
+      <div className="sm:block hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">
         <h2 className="text-[9.3rem] font-bold text-secondary opacity-20 whitespace-nowrap uppercase tracking-tighter">
           Dehradun
         </h2>
@@ -17,7 +17,7 @@ const AdmissionsCTA = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-secondary mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-secondary mb-4 sm:mb-8"
         >
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -32,16 +32,14 @@ const AdmissionsCTA = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-primary text-3xl md:text-5xl font-bold tracking-tighter mb-8 leading-[1.1]"
+          className="text-primary text-3xl md:text-5xl font-bold tracking-tighter mb-4 sm:mb-8 leading-[1.1]"
         >
           Admissions Open for <br />
-          <span className="text-secondary italic font-serif">
-            Dehradun Branch
-          </span>
+          <span className="text-secondary ">Dehradun Branch</span>
         </motion.h2>
 
         {/* Description Body */}
-        <div className="space-y-6 mb-12">
+        <div className="space-y-3 sm:space-y-6 mb-5 sm:mb-12">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

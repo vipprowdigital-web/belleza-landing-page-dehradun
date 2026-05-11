@@ -29,9 +29,7 @@ export default function About() {
                 />
                 {/* Floating Badge */}
                 <div className="absolute bottom-6 right-6 bg-primary px-4 py-2 rounded-xl shadow-lg">
-                  <p className="text-accent sm:text-2xl font-bold italic">
-                    100%
-                  </p>
+                  <p className="text-accent sm:text-2xl font-bold">100%</p>
                   <p className="text-light text-[8px] sm:text-[10px] uppercase tracking-widest font-semibold">
                     Practical Training
                   </p>
@@ -52,9 +50,7 @@ export default function About() {
                 </h4>
                 <h2 className="font-bold tracking-tighter text-primary text-4xl md:text-5xl leading-tight">
                   About{" "}
-                  <span className="text-secondary italic">
-                    Belleza Beauty School
-                  </span>{" "}
+                  <span className="text-secondary">Belleza Beauty School</span>{" "}
                   Dehradun
                 </h2>
               </motion.div>
@@ -68,7 +64,7 @@ export default function About() {
               >
                 <p>
                   Belleza Beauty School Dehradun is a{" "}
-                  <span className="text-primary font-semibold italic">
+                  <span className="text-primary font-semibold">
                     premium beauty academy
                   </span>{" "}
                   designed for students who want to build a successful career in
@@ -118,7 +114,7 @@ export default function About() {
         transition={{ duration: 0.8 }}
       >
         {/* Stylized Quote Icon */}
-        <div className="font-serif text-8xl leading-none text-secondary">
+        <div className="text-8xl leading-none text-secondary">
           &ldquo;
         </div>
 
@@ -126,7 +122,7 @@ export default function About() {
           At Belleza, students don’t just learn techniques —
           <br />
           they learn how to work confidently in the{" "}
-          <span className="text-secondary font-serif italic">
+          <span className="text-secondary ">
             {" "}
             real beauty industry.
           </span>
