@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MapPin } from "lucide-react";
+// import { Phone, MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
 import { openWhatsApp } from "../utils/openWhatsapp";
 
 const FloatingContact = ({ appConfig }) => {
   // Separate states so they don't both open at the same time
   const [isPhoneExpanded, setIsPhoneExpanded] = useState(false);
-  const [isMapExpanded, setIsMapExpanded] = useState(false);
+  // const [isMapExpanded, setIsMapExpanded] = useState(false);
 
   //   const variants = {
   //     collapsed: { width: 45 },
@@ -55,7 +56,7 @@ const FloatingContact = ({ appConfig }) => {
         </motion.div>
 
         {/* Address Item */}
-        {appConfig.companyAddress && (
+        {/* {appConfig.companyAddress && (
           <motion.div
             className="sm:hidden flex items-center bg-primary text-light rounded-full overflow-hidden cursor-pointer shadow-lg border border-light"
             initial="collapsed"
@@ -80,7 +81,7 @@ const FloatingContact = ({ appConfig }) => {
               {appConfig.companyAddress[0].address}
             </motion.span>
           </motion.div>
-        )}
+        )} */}
       </motion.div>
     </div>
   );

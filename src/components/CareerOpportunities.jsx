@@ -113,7 +113,7 @@ const CareerOpportunities = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-base font-bold text-primary tracking-tight leading-tight transition-colors duration-300 group-hover:text-white">
+              <h3 className="text-sm font-bold text-primary tracking-tight leading-tight transition-colors duration-300 group-hover:text-white">
                 {role}
               </h3>
             </motion.div>

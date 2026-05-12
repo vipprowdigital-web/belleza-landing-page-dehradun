@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Feature Rows */}
-        <div className="divide-y divide-[#826955]">
+        <div className="divide-y divide-[#b0a8a2]">
           {features.map((item, index) => {
             const Icon = item.icon;
             return (

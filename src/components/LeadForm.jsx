@@ -273,7 +273,7 @@ const LeadForm = ({ address, phone }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-5 sm:mt-8 space-y-1 sm:space-y-3"
+              className="hidden sm:block mt-5 sm:mt-8 space-y-1 sm:space-y-3"
             >
               {features.map((item) => (
                 <li key={item} className="flex items-center gap-3">
@@ -292,7 +292,7 @@ const LeadForm = ({ address, phone }) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.7 }}
-            className="mt-5 sm:mt-10"
+            className="sm:block hidden mt-5 sm:mt-10"
           >
             <div className="mb-4 h-px bg-accent" />
             <ul className="space-y-2">

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section
-      className="w-full py-20 px-6 bg-light flex flex-col justify-center items-center"
+      className="w-full pt-20 sm:py-20 px-6 bg-light flex flex-col justify-center items-center"
       id="about"
     >
       <section className="w-full">
@@ -107,24 +107,21 @@ export default function About() {
         </div>
       </section>
       <motion.div
-        className="text-center mt-30 px-4"
+        className="text-center mt-10 sm:mt-30 px-4"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        {/* Stylized Quote Icon */}
         <div className="text-8xl leading-none text-secondary">&ldquo;</div>
 
-        <p className="font-bold text-3xl md:text-4xl leading-tighter text-primary max-w-4xl mx-auto mb-10 tracking-tighter">
+        <p className="font-bold text-2xl md:text-4xl leading-tighter text-primary max-w-4xl mx-auto sm:mb-10 tracking-tighter">
           At Belleza, students don’t just learn techniques —
           <br />
           they learn how to work confidently in the{" "}
           <span className="text-secondary "> real beauty industry.</span>
         </p>
-
-        {/* Pulsing Status Indicator */}
-        <div className="flex items-center justify-center gap-3">
+        <div className="hidden sm:flex items-center justify-center gap-3">
           <span
             className="inline-block w-2.5 h-2.5 rounded-full bg-secondary"
             style={{ boxShadow: "0 0 15px rgba(var(--accent-rgb), 0.6)" }}

@@ -119,7 +119,7 @@ const WhatYouGet = () => {
               </motion.div>
 
               {/* Decorative Geometric Elements */}
-              <div className="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 border-secondary opacity-30 rounded-tl-[3rem]" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 border-secondary opacity-30 rounded-tl-[5rem]" />
             </motion.div>
           </div>
         </div>
