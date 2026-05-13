@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section
-      className="w-full pt-20 sm:py-20 px-6 bg-light flex flex-col justify-center items-center"
+      className="w-full pt-10 sm:py-20 px-6 flex flex-col justify-center items-center"
       id="about"
     >
       <section className="w-full">
@@ -45,10 +45,10 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-2">
+                <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-2">
                   Empowering Your Passion
                 </h4>
-                <h2 className="font-bold tracking-tighter text-primary text-4xl md:text-5xl leading-tight">
+                <h2 className="font-bold tracking-tighter text-primary text-3xl md:text-5xl leading-tight">
                   About{" "}
                   <span className="text-secondary">Belleza Beauty School</span>{" "}
                   Dehradun
@@ -56,7 +56,7 @@ export default function About() {
               </motion.div>
 
               <motion.div
-                className="space-y-4 text-secondary leading-tight text-md"
+                className="sm:space-y-4 space-y-2 text-secondary leading-tight text-md"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

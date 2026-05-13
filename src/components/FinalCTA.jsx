@@ -4,7 +4,7 @@ import { scrollTo } from "../utils/scrollTo";
 
 const FinalCTA = ({ address, phone }) => {
   return (
-    <section className="py-20 bg-light relative overflow-hidden">
+    <section className="sm:py-20 pt-10 relative overflow-hidden">
       <div className="max-w-8xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
@@ -15,7 +15,7 @@ const FinalCTA = ({ address, phone }) => {
             className="space-y-8 px-4 sm:px-8"
           >
             <div>
-              <h2 className="text-primary text-2xl md:text-5xl font-bold tracking-tighter leading-tight mb-3">
+              <h2 className="text-primary text-3xl md:text-5xl font-bold tracking-tighter leading-tight mb-3">
                 Ready to Start Your <br />
                 <span className="text-secondary">Beauty Career?</span>
               </h2>
@@ -45,7 +45,7 @@ const FinalCTA = ({ address, phone }) => {
                 href={`tel:${phone}`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-2.5 bg-light text-primary border-2 border-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-light transition-all"
+                className="px-8 py-2.5 bg-white text-primary border-2 border-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-light transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call Now

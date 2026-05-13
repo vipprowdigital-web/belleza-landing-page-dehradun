@@ -37,9 +37,7 @@ const faqs = [
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div
-      className={`border-b border-secondary transition-colors duration-300 ${isOpen ? "bg-light" : ""}`}
-    >
+    <div className={`border-b border-secondary transition-colors duration-300`}>
       <button
         onClick={onClick}
         className="w-full py-6 flex items-center justify-between text-left gap-4"
@@ -79,7 +77,7 @@ const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="w-full pt-24 px-6 bg-light" id="faqs">
+    <section className="w-full pt-10 sm:pt-24 px-6" id="faqs">
       <div className="w-full sm:w-3/4 lg:w-1/2 mx-auto">
         {/* Header */}
         <div className="mb-10">
@@ -96,8 +94,7 @@ const FAQs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-primary text-2xl md:text-4xl font-bold mt-2 tracking-tight"
           >
-            Frequently Asked{" "}
-            <span className="text-secondary">Questions</span>
+            Frequently Asked <span className="text-secondary">Questions</span>
           </motion.h2>
         </div>
 
@@ -122,7 +119,7 @@ const FAQs = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="sm:mt-12 p-8 bg-light rounded-4xl flex flex-col md:flex-row items-center justify-between gap-6"
+          className="sm:mt-12 p-5 rounded-4xl flex flex-col md:flex-row items-center justify-between gap-3"
         >
           <p className="text-primary text-center font-medium tracking-tight">
             Still have more questions about our Dehradun branch?

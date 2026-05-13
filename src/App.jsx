@@ -49,7 +49,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-light">
+    <div className="flex flex-col justify-center items-center bg-white">
       <Navbar />
       <HeroSection
         address={appConfig.companyAddress}

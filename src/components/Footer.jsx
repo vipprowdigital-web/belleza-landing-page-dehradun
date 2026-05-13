@@ -197,7 +197,7 @@ const Footer = ({ appConfig }) => {
               href="https://vipprow.com"
               className="hover:text-accent cursor-pointer"
             >
-              Developed by Vipprow
+              Developed by <span className="text-accent"> Vipprow</span>
             </a>
             {/* <span className="hover:text-accent cursor-pointer">
               Terms of Service

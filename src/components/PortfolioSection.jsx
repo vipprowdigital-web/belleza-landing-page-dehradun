@@ -15,7 +15,7 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-8"
           >
-            <h2 className="text-4xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
+            <h2 className="text-3xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
               Build Your <br />
               <span className="text-secondary">Professional</span> <br />
               Portfolio

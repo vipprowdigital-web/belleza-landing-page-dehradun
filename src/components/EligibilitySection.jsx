@@ -42,14 +42,14 @@ const candidates = [
 
 const EligibilitySection = () => {
   return (
-    <section className="py-24 px-6 bg-light">
+    <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="sm:text-center mb-7 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-primary text-4xl md:text-5xl font-bold tracking-tight mb-4"
+            className="text-primary text-3xl md:text-5xl font-bold tracking-tight mb-4"
           >
             Who Can Join{" "}
             <span className="text-secondary">Belleza Beauty School?</span>

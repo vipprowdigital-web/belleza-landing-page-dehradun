@@ -36,12 +36,12 @@ const steps = [
 
 const TrainingTimeline = () => {
   return (
-    <section className="py-24 bg-light px-6" id="training">
+    <section className="py-24 px-6" id="training">
       <div className="max-w-7xl mx-auto relative">
         {" "}
         {/* Added relative here */}
         <div className="sm:text-center mb-16">
-          <h2 className="text-primary text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-primary text-3xl md:text-5xl font-bold tracking-tight">
             How We <span className="text-secondary">Train</span> Our Students
           </h2>
           <p className="mt-4 text-secondary font-medium">

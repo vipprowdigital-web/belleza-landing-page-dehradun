@@ -88,7 +88,7 @@ const DehradunHero = ({ address, phone }) => {
 
               <a
                 href={`tel:${phone}`}
-                className="bg-secondary backdrop-blur-md border border-white/20 text-light px-10 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
+                className="bg-primary backdrop-blur-md border border-white/20 text-light px-10 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
               >
                 <Phone size={18} className="text-accent" />
                 Call Now

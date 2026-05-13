@@ -55,7 +55,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="pb-10 sm:py-28 px-6 bg-light overflow-hidden">
+    <section className="pb-10 sm:py-28 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="sm:text-center mb-5 sm:mb-16">
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="text-primary text-4xl md:text-5xl font-bold mt-4 tracking-tight"
+            className="text-primary text-3xl md:text-5xl font-bold mt-4 tracking-tight"
           >
             Why Choose Belleza{" "}
             <span className="text-secondary">Beauty School?</span>

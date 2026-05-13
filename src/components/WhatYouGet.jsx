@@ -19,7 +19,7 @@ const benefits = [
 
 const WhatYouGet = () => {
   return (
-    <section className="py-10 sm:py-24 px-6 bg-light relative overflow-hidden h-full">
+    <section className="py-10 sm:py-24 px-6 relative overflow-hidden h-full">
       {/* Background Decorative Blurs */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-accent blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-75 h-75 bg-primary blur-[100px] rounded-full -z-10" />
@@ -34,12 +34,12 @@ const WhatYouGet = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter leading-[0.9] sm:mb-7 mb-3">
+              <h2 className="text-3xl md:text-6xl font-bold text-primary tracking-tighter leading-[0.9] sm:mb-7 mb-3">
                 What You Get at <br />
                 <span className="text-secondary">Belleza</span>
               </h2>
 
-              <p className="text-secondary text-lg font-medium leading-tight mb-7 max-w-lg">
+              <p className="text-secondary text-md sm:text-lg font-medium leading-tight mb-7 max-w-lg">
                 We provide everything you need to transform from a passionate
                 beginner into a certified industry professional.
               </p>
@@ -55,7 +55,7 @@ const WhatYouGet = () => {
                     transition={{ delay: index * 0.05 }}
                     className="flex items-start gap-2 group"
                   >
-                    <div className="mt-1 shrink-0 w-5 h-5 rounded-md bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-all duration-300">
+                    <div className="mt-1 shrink-0 w-5 h-5 rounded-md bg-accent flex items-center justify-center transition-all duration-300">
                       <Check className="w-3 h-3 text-primary" strokeWidth={4} />
                     </div>
                     <span className="text-primary font-bold text-sm tracking-tight transition-colors group-hover:text-primary">
@@ -68,7 +68,7 @@ const WhatYouGet = () => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-7 bg-primary text-light px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 hover:bg-secondary transition-all flex items-center gap-3"
+                className="mt-7 bg-primary text-light px-6 sm:px-12 sm:py-5 py-3 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 hover:bg-secondary transition-all flex items-center gap-3"
                 onClick={() => scrollTo("contact")}
               >
                 Start Your Journey

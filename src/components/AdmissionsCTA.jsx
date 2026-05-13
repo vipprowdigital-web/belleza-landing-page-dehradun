@@ -4,10 +4,10 @@ import { scrollTo } from "../utils/scrollTo";
 
 const AdmissionsCTA = () => {
   return (
-    <section className="relative pb-10 sm:py-24 px-6 bg-light overflow-hidden flex flex-col items-center justify-center">
+    <section className="relative pb-10 sm:py-24 px-6 overflow-hidden flex flex-col items-center justify-center">
       {/* Large Background Decorative Text */}
       <div className="sm:block hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">
-        <h2 className="text-[9.3rem] font-bold text-secondary opacity-20 whitespace-nowrap uppercase tracking-tighter">
+        <h2 className="text-[9rem] font-bold text-secondary opacity-20 whitespace-nowrap uppercase tracking-tighter">
           Dehradun
         </h2>
       </div>
@@ -44,7 +44,7 @@ const AdmissionsCTA = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-primary tracking-tighter text-xl md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto"
+            className="text-primary tracking-tighter sm:text-xl md:text-2xl font-medium sm:leading-relaxed max-w-3xl mx-auto"
           >
             Take your first step toward a professional beauty career with
             Belleza Beauty School Dehradun.
@@ -54,7 +54,7 @@ const AdmissionsCTA = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-secondary tracking-tight font-semibold text-lg leading-relaxed max-w-2xl mx-auto"
+            className="text-secondary tracking-tight font-semibold sm:text-lg sm:leading-relaxed max-w-2xl mx-auto"
           >
             Learn from expert trainers, practice on live models, build your
             portfolio, and get certified with career-focused training.
@@ -81,7 +81,7 @@ const AdmissionsCTA = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-10 py-2.5 bg-accent text-primary border-2 border-secondary rounded-full font-semibold tracking-tight text-md flex items-center justify-center gap-2 transition-all duration-300 hover:bg-light"
+            className="w-full sm:w-auto px-10 py-2.5 bg-accent text-primary border-2 border-accent rounded-full font-semibold tracking-tight text-md flex items-center justify-center gap-2 transition-all duration-300"
             onClick={() => scrollTo("contact")}
           >
             <MessageCircle className="w-5 h-5" />

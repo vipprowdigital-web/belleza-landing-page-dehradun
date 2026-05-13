@@ -45,7 +45,7 @@ const getRoleIcon = (role) => {
 const CareerOpportunities = () => {
   return (
     <section
-      className="w-full py-10 sm:py-24 px-6 bg-light relative overflow-hidden"
+      className="w-full pt-10 sm:py-24 px-6 relative overflow-hidden"
       id="career"
     >
       {/* Decorative Background Glows */}
@@ -54,7 +54,7 @@ const CareerOpportunities = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Header Section - Modern split design */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 sm:mb-20 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 sm:mb-20 gap-3 sm:gap-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,11 +62,11 @@ const CareerOpportunities = () => {
             transition={{ duration: 0.8 }}
             className="md:max-w-xl"
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
+            <h2 className="text-3xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
               Career <br />
               <span className="text-secondary">Opportunities</span>
             </h2>
-            <div className="w-16 h-1 bg-primary mt-6" />
+            <div className="w-16 h-1 bg-primary sm:mt-6 mt-3" />
           </motion.div>
 
           <motion.div
@@ -96,14 +96,14 @@ const CareerOpportunities = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.08, duration: 0.6 }}
               whileHover={{ y: -6 }}
-              className="group relative h-35 p-5 rounded-3xl bg-white flex flex-col justify-between overflow-hidden transition-all duration-300"
+              className="group relative h-35 p-5 rounded-3xl bg-white border-primary border flex flex-col justify-between overflow-hidden transition-all duration-300"
             >
               {/* Hover Radial Reveal - Soft glow on hover */}
               <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl -z-10" />
               <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
 
               {/* Decorative Number */}
-              <span className="sm:block hidden absolute top-6 right-8 text-4xl font-bold text-secondary group-hover:text-accent transition-colors duration-500">
+              <span className="sm:block hidden absolute top-6 right-8 text-2xl font-bold text-primary transition-colors duration-500">
                 0{index + 1}
               </span>
 

@@ -129,7 +129,7 @@ const ErrorMsg = ({ error }) => (
 const inputCls = (hasError) =>
   [
     "w-full px-4 py-3 rounded-xl text-sm text-secondary",
-    "bg-light outline-none transition-all duration-200",
+    "outline-none transition-all duration-200",
     "placeholder:text-secondary",
     hasError
       ? "border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100"
@@ -211,7 +211,7 @@ const LeadForm = ({ address, phone }) => {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-linear-to-br px-2 sm:py-20 pt-20 md:px-8"
+      className="relative w-full overflow-hidden bg-linear-to-br px-2 sm:py-20 pt-10 md:px-8"
     >
       {/* Decorative blobs */}
       {/* <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full bg-secondary blur-3xl" />
@@ -222,12 +222,12 @@ const LeadForm = ({ address, phone }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-12 sm:text-center px-4"
+        className="sm:mb-12 mb-7 sm:text-center px-4"
       >
         <p className="mb-2.5 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-secondary">
           ✦ Enroll Today ✦
         </p>
-        <h2 className="text-4xl font-bold tracking-tight text-primary md:text-5xl">
+        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-5xl">
           Begin Your <span className="text-secondary ">Beauty Journey</span>
         </h2>
         <div className="sm:mx-auto mt-4 h-0.5 w-16 bg-linear-to-r from-transparent via-[#826955] to-transparent" />
@@ -254,10 +254,10 @@ const LeadForm = ({ address, phone }) => {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-light">
+              <p className="mb-3 sm:py-0 pt-2 text-xs font-semibold uppercase tracking-[0.28em] text-light">
                 Free Counselling
               </p>
-              <h3 className="mb-4 text-3xl font-bold leading-tight tracking-tight text-light md:text-4xl">
+              <h3 className="sm:mb-4 mb-2 text-3xl font-bold leading-tight tracking-tight text-light md:text-4xl">
                 Get Course Details
               </h3>
               <p className="text-md font-light leading-relaxed text-light">
@@ -309,7 +309,7 @@ const LeadForm = ({ address, phone }) => {
         </div>
 
         {/* ── Right panel ── */}
-        <div className="flex-1 bg-light px-4 py-5 md:px-10 md:py-14 border border-secondary rounded-bl-3xl sm:rounded-bl-none sm:rounded-tr-3xl rounded-br-3xl">
+        <div className="flex-1 bg-white px-4 py-5 md:px-10 md:py-14 border border-secondary rounded-bl-3xl sm:rounded-bl-none sm:rounded-tr-3xl rounded-br-3xl">
           <AnimatePresence mode="wait">
             {/* Success screen */}
             {status === "success" ? (
@@ -506,7 +506,7 @@ const LeadForm = ({ address, phone }) => {
                     className={`w-full rounded-xl py-3 text-md font-semibold tracking-wide text-light transition-all duration-200 ${
                       status === "loading"
                         ? "cursor-not-allowed bg-secondary"
-                        : "cursor-pointer bg-linear-to-r from-[#826955] to-[#fddfbf] hover:shadow-xl hover:shadow-amber-400/30"
+                        : "cursor-pointer bg-linear-to-r from-[#826955] to-[#fddfbf] "
                     }`}
                   >
                     {status === "loading" ? (
