@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Feature Rows */}
-        <div className="divide-y divide-[#b0a8a2]">
+        <div className="sm:divide-y divide-[#b0a8a2]">
           {features.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08, duration: 0.7 }}
-                className="group grid grid-cols-[auto_1fr] md:grid-cols-[80px_1fr_2fr] gap-x-6 md:gap-x-10 gap-y-2 py-5 sm:py-8 md:py-10 items-start hover:bg-secondary transition-colors duration-300 sm:rounded-2xl mx-1 sm:-mx-4"
+                className="group grid grid-cols-[auto_1fr] md:grid-cols-[80px_1fr_2fr] gap-x-6 md:gap-x-10 gap-y-2 py-3 sm:py-8 md:py-10 items-start  transition-colors duration-300 sm:rounded-2xl mx-1 sm:-mx-4"
               >
                 {/* Number + Icon (stacked on mobile, side-by-side on md) */}
                 <div className="flex flex-col items-center gap-3 pt-1">

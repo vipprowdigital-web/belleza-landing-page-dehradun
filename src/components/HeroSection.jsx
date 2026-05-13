@@ -22,18 +22,28 @@ const DehradunHero = ({ address, phone }) => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-linear-to-r from-black/80 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-3/2 bg-linear-to-r from-black/80 to-transparent" />
         {/* <div className="absolute inset-0 bg-linear-to-r from-red-900/40 via-red-800/10 to-transparent" /> */}
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-3">
+            {/* <motion.h1
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-accent tracking-tighter leading-[0.9]"
+            >
+              Become a <br />
+              <span className="text-light">Certified</span> <br />
+              Beauty Professional
+            </motion.h1> */}
             <motion.h1
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary tracking-tighter leading-[0.9]"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.9] bg-linear-to-r from-[#826955] via-[#fddfbf] to-[#f7f7ee] text-transparent bg-clip-text"
             >
               Become a <br />
               <span className="text-light">Certified</span> <br />
@@ -45,10 +55,10 @@ const DehradunHero = ({ address, phone }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="sm:block hidden text-accent text-lg md:text-xl font-medium max-w-2xl leading-tight"
+              className="text-accent text-sm md:text-md font-medium max-w-2xl leading-tight"
             >
               Learn professional{" "}
-              <span className="text-light ">
+              <span className="text-light font-bold">
                 Makeup, Hair, Nail, Skin & Cosmetology
               </span>{" "}
               with practical training, live model practice, and expert guidance
@@ -76,7 +86,7 @@ const DehradunHero = ({ address, phone }) => {
               className="flex flex-wrap gap-5 pt-4"
             >
               <button
-                className="bg-accent text-primary px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-3 group"
+                className="bg-accent text-primary px-7 py-2 sm:py-3 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 flex items-center gap-3 group"
                 onClick={() => scrollTo("contact")}
               >
                 Book Free Counselling
@@ -88,7 +98,7 @@ const DehradunHero = ({ address, phone }) => {
 
               <a
                 href={`tel:${phone}`}
-                className="bg-primary backdrop-blur-md border border-white/20 text-light px-10 py-3 rounded-2xl font-black text-sm uppercase tracking-widest transition-all flex items-center gap-3"
+                className="bg-primary backdrop-blur-md border border-white/20 text-light px-7 py-3 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest transition-all flex items-center gap-3"
               >
                 <Phone size={18} className="text-accent" />
                 Call Now

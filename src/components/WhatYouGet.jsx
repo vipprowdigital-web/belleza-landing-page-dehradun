@@ -68,7 +68,7 @@ const WhatYouGet = () => {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-7 bg-primary text-light px-6 sm:px-12 sm:py-5 py-3 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 hover:bg-secondary transition-all flex items-center gap-3"
+                className="mt-7 bg-primary text-light px-6 sm:px-12 sm:py-5 py-3 rounded-2xl font-bold text-xs sm:text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 hover:bg-secondary transition-all flex items-center gap-3"
                 onClick={() => scrollTo("contact")}
               >
                 Start Your Journey
