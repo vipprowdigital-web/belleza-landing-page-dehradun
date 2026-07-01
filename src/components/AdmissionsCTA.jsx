@@ -32,11 +32,18 @@ const AdmissionsCTA = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          className="font-bold tracking-tighter text-3xl md:text-5xl capitalize leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text"
+        >
+          Admissions Open for Dehradun Branch
+        </motion.h2>
+        {/* <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-primary text-3xl md:text-5xl font-bold tracking-tighter mb-4 sm:mb-8 leading-[1.1]"
         >
           Admissions Open for <br />
           <span className="text-secondary ">Dehradun Branch</span>
-        </motion.h2>
+        </motion.h2> */}
 
         {/* Description Body */}
         <div className="space-y-3 sm:space-y-6 mb-5 sm:mb-12">

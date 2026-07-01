@@ -48,10 +48,8 @@ export default function About() {
                 <h4 className="text-secondary font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-2">
                   Empowering Your Passion
                 </h4>
-                <h2 className="font-bold tracking-tighter text-primary text-3xl md:text-5xl leading-tight">
-                  About{" "}
-                  <span className="text-secondary">Belleza Beauty School</span>{" "}
-                  Dehradun
+                <h2 className="font-bold tracking-tighter  text-3xl capitalize md:text-5xl leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+                  About Belleza Beauty School Dehradun
                 </h2>
               </motion.div>
 

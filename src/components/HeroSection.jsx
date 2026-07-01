@@ -43,7 +43,7 @@ const DehradunHero = ({ address, phone }) => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.9] bg-linear-to-r from-[#826955] via-[#fddfbf] to-[#f7f7ee] text-transparent bg-clip-text"
+              className="text-4xl capitalize md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.9] bg-linear-to-r from-[#826955] via-[#fddfbf] to-[#f7f7ee] text-transparent bg-clip-text"
             >
               Become a <br />
               <span className="text-light">Certified</span> <br />

@@ -62,9 +62,12 @@ const CareerOpportunities = () => {
             transition={{ duration: 0.8 }}
             className="md:max-w-xl"
           >
-            <h2 className="text-3xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
+            {/* <h2 className="text-3xl md:text-6xl font-bold text-primary tracking-tighter leading-none">
               Career <br />
               <span className="text-secondary">Opportunities</span>
+            </h2> */}
+            <h2 className="font-bold tracking-tighter  text-3xl md:text-5xl capitalize leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+              Career Opportunities
             </h2>
             <div className="w-16 h-1 bg-primary sm:mt-6 mt-3" />
           </motion.div>

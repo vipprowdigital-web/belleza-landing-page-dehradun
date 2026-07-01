@@ -73,11 +73,20 @@ const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.8 }}
+            className="font-bold tracking-tighter  text-3xl md:text-5xl capitalize leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text"
+          >
+            Why Choose Belleza Beauty School?
+          </motion.h2>
+          {/* <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.8 }}
             className="text-primary text-3xl md:text-5xl font-bold mt-4 tracking-tight"
           >
             Why Choose Belleza{" "}
             <span className="text-secondary">Beauty School?</span>
-          </motion.h2>
+          </motion.h2> */}
           <div className="w-24 h-1 bg-secondary sm:mx-auto mt-3 sm:mt-6 rounded-full opacity-50" />
         </div>
 

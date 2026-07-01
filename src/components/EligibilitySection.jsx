@@ -49,11 +49,18 @@ const EligibilitySection = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            className="font-bold tracking-tighter  text-3xl md:text-5xl capitalize leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text"
+          >
+            Who Can Join Belleza Beauty School?
+          </motion.h2>
+          {/* <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-primary text-3xl md:text-5xl font-bold tracking-tight mb-4"
           >
             Who Can Join{" "}
             <span className="text-secondary">Belleza Beauty School?</span>
-          </motion.h2>
+          </motion.h2> */}
           <div className="h-1 w-20 bg-secondary sm:mx-auto rounded-full" />
         </div>
 

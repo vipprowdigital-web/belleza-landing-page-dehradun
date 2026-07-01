@@ -17,10 +17,11 @@ import FAQs from "./components/FAQs";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import FloatingContact from "./components/FloatingContact";
+// import FloatingContact from "./components/FloatingContact";
 import Courses from "./components/Courses";
 import { baseUrl } from "./utils/baseUrl";
 import { useEffect, useState } from "react";
+import MasonryGallery from "./components/MasonryGallery";
 
 function App() {
   const [appConfig, setAppConfig] = useState([]);
@@ -32,17 +33,17 @@ function App() {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
 
         if (response.ok) {
           const data = await response.json();
-          console.log("Response DATA: ", data.data);
+          // console.log("Response DATA: ", data.data);
           setAppConfig(data.data);
         } else {
-          console.error("Couldn't fetch testimonies.");
+          console.error("Couldn't fetch app configuration.");
         }
       } catch {
-        console.error("Error while fetching testimonials.");
+        console.error("Error while fetching app configuration.");
       }
     };
     fetchAppConfig();
@@ -67,6 +68,7 @@ function App() {
       <WhatYouGet />
       <PortfolioSection />
       <CareerOpportunities />
+      {/* <MasonryGallery /> */}
       <EligibilitySection />
       <AdmissionsCTA />
       <StudentExperience />
@@ -76,7 +78,7 @@ function App() {
         phone={appConfig.phoneNumber}
       />
       <Footer appConfig={appConfig} />
-      <FloatingContact appConfig={appConfig} />
+      {/* <FloatingContact appConfig={appConfig} /> */}
     </div>
   );
 }

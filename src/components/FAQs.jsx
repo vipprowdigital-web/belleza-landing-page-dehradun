@@ -92,10 +92,17 @@ const FAQs = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            className="font-bold tracking-tighter  text-3xl capitalize md:text-5xl leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          {/* <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-primary text-2xl md:text-4xl font-bold mt-2 tracking-tight"
           >
             Frequently Asked <span className="text-secondary">Questions</span>
-          </motion.h2>
+          </motion.h2> */}
         </div>
 
         {/* Accordion List */}

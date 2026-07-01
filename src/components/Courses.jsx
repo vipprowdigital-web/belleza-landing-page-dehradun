@@ -76,9 +76,10 @@ export default function Courses() {
         <p className="text-secondary uppercase tracking-widest text-[10px] sm:text-xs font-bold">
           Explore & Enroll
         </p>
-        <h2 className="text-primary text-3xl md:text-5xl font-bold sm:mb-4 tracking-tight">
-          Featured <span className="text-secondary ">Courses</span>
+        <h2 className="capitalize text-3xl md:text-5xl font-bold sm:mb-4 tracking-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+          Featured Courses
         </h2>
+        {/* Featured <span className="text-secondary ">Courses</span> */}
         <p className="sm:block hidden text-secondary capitalize tracking-tight text-sm sm:text-lg px-3 sm:max-w-2xl text-center mx-auto">
           Our globally recognized curriculum and career-focused approach help
           students master beauty skills and confidently step into the
@@ -197,7 +198,7 @@ export default function Courses() {
                         {course.short_description}
                       </p>
                     </div>
-                    <ul className="space-y-3 mb-3 grow">
+                    {/* <ul className="space-y-3 mb-3 grow">
                       {course.description
                         .replace(/<\/?(p|strong)>/g, "")
                         .trim()
@@ -214,7 +215,33 @@ export default function Courses() {
                             {sum}
                           </li>
                         ))}
-                    </ul>
+                    </ul> */}
+                    {(() => {
+                      const cleanDescription = (course.description || "")
+                        .replace(/<\/?[^>]+(>|$)/g, "")
+                        .trim();
+
+                      const sentences = cleanDescription
+                        .split(".")
+                        .map((s) => s.trim())
+                        .filter((s) => s.length > 0);
+
+                      return (
+                        <ul className="space-y-3 mb-3 grow">
+                          {sentences.map((sentence, index) => (
+                            <li
+                              key={index}
+                              className="text-[13px] text-primary font-medium flex items-start gap-3"
+                            >
+                              <div className="mt-1 w-4 h-4 rounded-full bg-accent flex items-center justify-center shrink-0">
+                                <div className="w-1.5 h-1.5 bg-secondary rounded-full" />
+                              </div>
+                              <span>{sentence}.</span>
+                            </li>
+                          ))}
+                        </ul>
+                      );
+                    })()}
 
                     <div className="w-full space-y-2 mb-3 text-sm text-secondary font-medium mt-auto flex flex-row justify-between items-center">
                       {course.price && (

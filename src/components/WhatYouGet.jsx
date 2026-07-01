@@ -34,9 +34,8 @@ const WhatYouGet = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-6xl font-bold text-primary tracking-tighter leading-[0.9] sm:mb-7 mb-3">
-                What You Get at <br />
-                <span className="text-secondary">Belleza</span>
+              <h2 className="text-3xl md:text-6xl font-bold tracking-tighter leading-[0.9] sm:mb-7 mb-3 bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+                What You Get at Belleza
               </h2>
 
               <p className="text-secondary text-md sm:text-lg font-medium leading-tight mb-7 max-w-lg">
@@ -92,6 +91,7 @@ const WhatYouGet = () => {
                   src="/assets/images/belleza-5.jpeg"
                   alt="Academy Environment"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 {/* <div className="absolute inset-0 bg-linear-to-t from-[#791535] opacity-40 to-transparent" /> */}
               </div>

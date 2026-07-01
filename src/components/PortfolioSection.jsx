@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 const PortfolioSection = () => {
   return (
-    <section className="w-full py-24 px-6 bg-accent overflow-hidden relative">
+    <section
+      className="w-full py-24 px-6 bg-accent overflow-hidden relative"
+      id="portfolio"
+    >
       {/* Background Subtle Texture */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none" />
 
@@ -15,11 +18,14 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-8"
           >
-            <h2 className="text-3xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
+            <h2 className="font-bold tracking-tighter text-3xl md:text-6xl capitalize leading-tighter bg-linear-to-r from-[#791535] via-[#826955] to-[#826955] text-transparent bg-clip-text">
+              Build Your Professional Portfolio
+            </h2>
+            {/* <h2 className="text-3xl md:text-7xl font-bold text-primary tracking-tighter leading-[0.9]">
               Build Your <br />
               <span className="text-secondary">Professional</span> <br />
               Portfolio
-            </h2>
+            </h2> */}
 
             <div className="space-y-6 max-w-md">
               <p className="text-secondary text-lg font-medium leading-tight">
@@ -53,6 +59,7 @@ const PortfolioSection = () => {
                 src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/SFX_Makeup_Look_djmou2.png"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Portfolio Image 1"
+                loading="lazy"
               />
             </motion.div>
 
@@ -69,6 +76,7 @@ const PortfolioSection = () => {
                   src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/hair_lfkqsp.png"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Portfolio Image 2"
+                  loading="lazy"
                 />
               </motion.div>
 
@@ -83,6 +91,7 @@ const PortfolioSection = () => {
                   src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/eye_makeup_mfwkif.png"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Portfolio Image 3"
+                  loading="lazy"
                 />
               </motion.div>
             </div>

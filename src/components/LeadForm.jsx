@@ -227,8 +227,11 @@ const LeadForm = ({ address, phone }) => {
         <p className="mb-2.5 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-secondary">
           ✦ Enroll Today ✦
         </p>
-        <h2 className="text-3xl font-bold tracking-tight text-primary md:text-5xl">
+        {/* <h2 className="text-3xl font-bold tracking-tight text-primary md:text-5xl">
           Begin Your <span className="text-secondary ">Beauty Journey</span>
+        </h2> */}
+        <h2 className="font-bold capitalize tracking-tighter  text-3xl md:text-5xl leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+          Begin Your Beauty Journey
         </h2>
         <div className="sm:mx-auto mt-4 h-0.5 w-16 bg-linear-to-r from-transparent via-[#826955] to-transparent" />
       </motion.div>
@@ -450,9 +453,7 @@ const LeadForm = ({ address, phone }) => {
                           : "text-stone-900"
                       }`}
                     >
-                      <option value="" disabled>
-                        Select Location
-                      </option>
+                      <option value="">Select Location</option>
                       {locations.map(({ value, label }) => (
                         <option key={value} value={value}>
                           {label}

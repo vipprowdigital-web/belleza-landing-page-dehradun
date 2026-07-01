@@ -41,8 +41,11 @@ const TrainingTimeline = () => {
         {" "}
         {/* Added relative here */}
         <div className="sm:text-center mb-16">
-          <h2 className="text-primary text-3xl md:text-5xl font-bold tracking-tight">
+          {/* <h2 className="text-primary text-3xl md:text-5xl font-bold tracking-tight">
             How We <span className="text-secondary">Train</span> Our Students
+          </h2> */}
+          <h2 className="font-bold tracking-tighter  text-3xl md:text-5xl capitalize leading-tight bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+            How We train our students
           </h2>
           <p className="mt-4 text-secondary font-medium">
             A step-by-step journey designed to build confidence and mastery.

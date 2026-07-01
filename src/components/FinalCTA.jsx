@@ -15,9 +15,8 @@ const FinalCTA = ({ address, phone }) => {
             className="space-y-8 px-4 sm:px-8"
           >
             <div>
-              <h2 className="text-primary text-3xl md:text-5xl font-bold tracking-tighter leading-tight mb-3">
-                Ready to Start Your <br />
-                <span className="text-secondary">Beauty Career?</span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight mb-3 bg-linear-to-r from-[#791535] via-[#826955] to-[#fddfbf] text-transparent bg-clip-text">
+                Ready to Start Your Beauty Career?
               </h2>
               <p className="text-secondary text-md md:text-lg leading-tight max-w-xl">
                 Join Belleza Beauty School Dehradun and learn professional
@@ -98,7 +97,7 @@ const FinalCTA = ({ address, phone }) => {
 
             <div className="aspect-3/3 overflow-hidden relative group">
               <img
-                src="/assets/images/belleza-4.jpeg"
+                src="/assets/images/image-1.jpg"
                 alt="Professional Beauty Training"
                 className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 loading="lazy"

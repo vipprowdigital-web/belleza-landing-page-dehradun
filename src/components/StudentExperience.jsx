@@ -15,11 +15,11 @@ const StudentExperience = () => {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
 
         if (response.ok) {
           const data = await response.json();
-          console.log("Response DATA: ", data.data);
+          // console.log("Response DATA: ", data.data);
           setTestimonials(data.data);
         } else {
           console.error("Couldn't fetch testimonies.");
@@ -60,10 +60,13 @@ const StudentExperience = () => {
           >
             Student Experience
           </motion.div>
-          <h2 className="text-light text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="font-bold tracking-tighter  text-3xl capitalize md:text-5xl leading-tight bg-linear-to-r from-[#fddfbf] to-[#f7f7ee] text-transparent bg-clip-text">
+            Voices of confidence
+          </h2>
+          {/* <h2 className="text-light text-3xl md:text-5xl font-bold tracking-tight">
             Voices of{" "}
             <span className=" text-accent">Confidence</span>
-          </h2>
+          </h2> */}
         </div>
 
         <div className="relative h-80 md:h-75">
