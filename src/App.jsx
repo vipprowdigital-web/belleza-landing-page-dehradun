@@ -21,10 +21,12 @@ import Navbar from "./components/Navbar";
 import Courses from "./components/Courses";
 import { baseUrl } from "./utils/baseUrl";
 import { useEffect, useState } from "react";
-import MasonryGallery from "./components/MasonryGallery";
+// import MasonryGallery from "./components/MasonryGallery";
+import Gallery from "./components/Gallery";
 
 function App() {
   const [appConfig, setAppConfig] = useState([]);
+  const [gallery, setGallery] = useState([]);
 
   useEffect(() => {
     const fetchAppConfig = async () => {
@@ -49,6 +51,29 @@ function App() {
     fetchAppConfig();
   }, []);
 
+  useEffect(() => {
+    const fetchGalleryImages = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/gallery/active`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+        // console.log("Response: ", response);
+
+        if (response.ok) {
+          const data = await response.json();
+          // console.log("Response DATA: ", data.data);
+          setGallery(data.data);
+        } else {
+          console.error("Couldn't fetch gallery images.");
+        }
+      } catch {
+        console.error("Error while fetching gallery images.");
+      }
+    };
+    fetchGalleryImages();
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center bg-white">
       <Navbar />
@@ -69,6 +94,7 @@ function App() {
       <PortfolioSection />
       <CareerOpportunities />
       {/* <MasonryGallery /> */}
+      <Gallery gallery={gallery} />
       <EligibilitySection />
       <AdmissionsCTA />
       <StudentExperience />
