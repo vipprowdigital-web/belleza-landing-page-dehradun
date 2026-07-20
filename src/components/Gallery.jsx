@@ -24,7 +24,7 @@ const Gallery = ({ gallery = [] }) => {
 
   if (!gallery || gallery.length === 0) return null;
 
-  const isCarousel = gallery.length > 4;
+  const isCarousel = gallery.length >= 4;
 
   const safePage =
     currentPage >= Math.ceil(gallery.length / cardsPerPage) ? 0 : currentPage;
@@ -43,7 +43,10 @@ const Gallery = ({ gallery = [] }) => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
 
   return (
-    <section className="py-24 px-6 bg-white w-[95%] sm:max-w-7xl" id="gallery">
+    <section
+      className="pt-20 sm:py-24 px-6 bg-white w-[95%] sm:max-w-7xl"
+      id="gallery"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
