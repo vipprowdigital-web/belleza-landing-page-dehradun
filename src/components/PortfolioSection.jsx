@@ -56,7 +56,7 @@ const PortfolioSection = () => {
               className="relative rounded-4xl overflow-hidden group cursor-pointer"
             >
               <img
-                src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/SFX_Makeup_Look_djmou2.png"
+                src="https://res.cloudinary.com/dt5azqjuz/image/upload/v1784810135/0P4A4008_-_Copy_-_Copy.JPG_d1dcxy.jpg"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Portfolio Image 1"
                 loading="lazy"
@@ -73,7 +73,7 @@ const PortfolioSection = () => {
                 className="relative rounded-4xl overflow-hidden group sm:h-70"
               >
                 <img
-                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/hair_lfkqsp.png"
+                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/v1784809979/0P4A4045_-_Copy_-_Copy.JPG_uwn2kv.jpg"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Portfolio Image 2"
                   loading="lazy"
@@ -88,7 +88,7 @@ const PortfolioSection = () => {
                 className="relative rounded-4xl overflow-hidden group sm:h-75"
               >
                 <img
-                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/f_auto,q_auto/eye_makeup_mfwkif.png"
+                  src="https://res.cloudinary.com/dt5azqjuz/image/upload/v1784809979/0P4A4079.JPG_mskbd2.jpg"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt="Portfolio Image 3"
                   loading="lazy"
