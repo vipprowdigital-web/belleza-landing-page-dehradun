@@ -33,11 +33,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-100 transition-all duration-500 ${
-        scrolled
-          ? "bg-primary backdrop-blur-lg shadow-lg py-3"
-          : "bg-transparent backdrop-blur-lg py-3"
-      }`}
+      className={`fixed top-0 w-full z-100 transition-all duration-500 ${scrolled
+        ? "bg-primary backdrop-blur-lg shadow-lg py-3"
+        : "bg-transparent backdrop-blur-lg py-3"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo Section */}
@@ -55,18 +54,17 @@ const Navbar = () => {
           </div>
         </div> */}
 
-        <motion.div onClick={scrollToTop}>
-          <img
-            src="/assets/images/logos/belleza_logo.svg"
-            alt="Belleza Logo"
-            className="w-25 object-contain"
-            loading="lazy"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-          />
-        </motion.div>
+        <motion.img
+          onClick={scrollToTop}
+          src="/assets/images/logos/belleza_logo.svg"
+          alt="Belleza Logo"
+          className="w-25 object-contain cursor-pointer"
+          loading="lazy"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.05 }}
+        />
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-10">
