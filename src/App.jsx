@@ -19,7 +19,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 // import FloatingContact from "./components/FloatingContact";
 import Courses from "./components/Courses";
-import { baseUrl } from "./utils/baseUrl";
+import { baseUrl, subDomain } from "./utils/baseUrl";
 import { useEffect, useState } from "react";
 // import MasonryGallery from "./components/MasonryGallery";
 import Gallery from "./components/Gallery";
@@ -31,7 +31,7 @@ function App() {
   useEffect(() => {
     const fetchAppConfig = async () => {
       try {
-        const response = await fetch(`${baseUrl}/app-config/public`, {
+        const response = await fetch(`${baseUrl}/app-config/frontend?subdomain=${subDomain}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -54,7 +54,7 @@ function App() {
   useEffect(() => {
     const fetchGalleryImages = async () => {
       try {
-        const response = await fetch(`${baseUrl}/gallery/active`, {
+        const response = await fetch(`${baseUrl}/gallery/frontend?subdomain=${subDomain}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
