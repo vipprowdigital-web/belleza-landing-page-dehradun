@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Pin, Phone, Link } from "lucide-react";
-import { baseUrl } from "../utils/baseUrl";
+import { baseUrl, subDomain } from "../utils/baseUrl";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 const courses = [
@@ -77,8 +77,9 @@ const initialData = {
   name: "",
   phone: "",
   courseName: "",
-  prefferedLocation: "",
+  preferredLocation: "",
   message: "",
+  subdomain: "",
 };
 
 const groupedCourses = Object.entries(categoryLabel).map(([key, label]) => ({
@@ -184,27 +185,29 @@ const LeadForm = ({ address, phone }) => {
       setErrors(validationErrors);
       return;
     }
+    const submissionData = {...formData, subdomain: subDomain};
     setStatus("loading");
     try {
-      console.log("Form Data: ", formData);
-      const response = await fetch(`${baseUrl}/contact`, {
+      console.log("Form Data: ", submissionData);
+      const response = await fetch(`${baseUrl}/contact/frontend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submissionData),
       });
-      // console.log("Response: ", response);
+
+      console.log("Response: ", response);
 
       if (response.ok) {
         setStatus("success");
         setFormData(initialData);
         setErrors({});
       } else {
+        console.error("Server error:", response.status, response.statusText);
         setStatus("error");
       }
-    } catch {
-      setStatus("success");
-      setFormData(initialData);
-      setErrors({});
+    } catch (error) {
+      console.error("Network error:", error);
+      setStatus("error");
     }
   };
 
