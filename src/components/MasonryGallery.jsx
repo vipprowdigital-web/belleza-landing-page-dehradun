@@ -82,7 +82,7 @@ export default function MasonryGallery() {
 
         if (response.ok) {
           const data = await response.json();
-          console.log("Response DATA: ", data.data);
+          // console.log("Response DATA: ", data.data);
           const processedImages = await processImageAspectRatios(data.data);
           setGallery(processedImages);
         } else {

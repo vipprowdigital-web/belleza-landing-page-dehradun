@@ -188,14 +188,14 @@ const LeadForm = ({ address, phone }) => {
     const submissionData = {...formData, subdomain: subDomain};
     setStatus("loading");
     try {
-      console.log("Form Data: ", submissionData);
+      // console.log("Form Data: ", submissionData);
       const response = await fetch(`${baseUrl}/contact/frontend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(submissionData),
       });
 
-      console.log("Response: ", response);
+      // console.log("Response: ", response);
 
       if (response.ok) {
         setStatus("success");
