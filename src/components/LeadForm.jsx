@@ -426,7 +426,7 @@ const LeadForm = ({ address, phone }) => {
                               {c.name}
                             </option>
                           ))}
-                        </optgroup>
+                      </optgroup>
                       ))}
                     </select>
                     <span className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-[9px] text-secondary">
