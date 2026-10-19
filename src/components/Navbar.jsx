@@ -24,11 +24,8 @@ const Navbar = () => {
     { name: "FAQ", href: "#faqs" },
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const goToHome = () => {
+    window.location.href = "https://bellezaschool.com";
   };
 
   return (
@@ -55,7 +52,7 @@ const Navbar = () => {
         </div> */}
 
         <motion.img
-          onClick={scrollToTop}
+          onClick={goToHome}
           src="/assets/images/logos/belleza_logo.svg"
           alt="Belleza Logo"
           className="w-25 object-contain cursor-pointer"
