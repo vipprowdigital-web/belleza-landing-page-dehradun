@@ -27,8 +27,45 @@ const Footer = ({ appConfig }) => {
       hover: "hover:text-pink-600",
     },
     {
+      name: "YouTube",
+      link: appConfig.youtubeLink,
+      path: (
+        <>
+          <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+          <path d="m10 15 5-3-5-3z" />
+        </>
+      ),
+      hover: "hover:text-red-600",
+    },
+    {
+      name: "LinkedIn",
+      link: appConfig.linkedinLink,
+      path: (
+        <>
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect width="4" height="12" x="2" y="9" />
+          <circle cx="4" cy="4" r="2" />
+        </>
+      ),
+      hover: "hover:text-blue-700",
+    },
+    {
+      name: "Twitter",
+      link: appConfig.twitterLink,
+      path: (
+        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      ),
+      hover: "hover:text-sky-500",
+    },
+    {
+      name: "WhatsApp",
+      link: appConfig.whatsAppLink,
+      path: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />,
+      hover: "hover:text-green-600",
+    },
+    {
       name: "Gmail",
-      link: `mailto:${appConfig.email}`,
+      link: appConfig.email ? `mailto:${appConfig.email}` : "",
       path: (
         <>
           <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -37,7 +74,7 @@ const Footer = ({ appConfig }) => {
       ),
       hover: "hover:text-red-500",
     },
-  ];
+  ].filter((s) => typeof s.link === "string" && s.link.trim() !== "");
 
   return (
     <footer className="w-full bg-primary text-light pt-16 pb-8 sm:px-20 px-6">
@@ -199,9 +236,9 @@ const Footer = ({ appConfig }) => {
             >
               Developed by <span className="text-accent"> Vipprow</span>
             </a>
-            {/* <span className="hover:text-accent cursor-pointer">
-              Terms of Service
-            </span> */}
+            <a href="/privacy-policy" className="hover:text-accent">
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>
